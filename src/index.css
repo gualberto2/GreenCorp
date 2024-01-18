@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#navbar {
+  position: fixed;
+  top: 0;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+#navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
