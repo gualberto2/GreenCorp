@@ -1,15 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 #navbar {
   position: fixed;
   top: 0;
-  transition: background-color 0.3s;
+  width: 100%;
+  height: 24px; /* Full viewport height by default */
+  background-color: white; /* White background by default */
+  transition: height 0.3s, background-color 0.3s; /* Smooth transition for height and background-color */
   z-index: 1000;
 }
 
 #navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.7);
+  height: 36px; /* Reduced height when scrolled */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Or any other color you prefer */
   backdrop-filter: blur(10px);
 }
