@@ -11,14 +11,8 @@ import { FaRecycle } from "react-icons/fa";
 export default function Home() {
   return (
     <div>
-      <div className="Hero-Section h-fit">
-        {/* The hero section */}
-        <img
-          src="https://th.bing.com/th/id/R.e3d44cbf0d403a667352b183271486fe?rik=rSqx67GOByaFAg&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2015%2f12%2f204024-road-sunset-field-Italy-clouds-grass-mountain-wildflowers-green-landscape-nature.jpg&ehk=BXynnaZJuEVj7f4iL2lViOA7yqCafPd28qizWIxqfVc%3d&risl=&pid=ImgRaw&r=0"
-          alt="Animation Section"
-        />
-      </div>
-      <div className="About-Card pt-20 p-20">
+      <div className="hero-bg h-screen">{/* Background image here */}</div>
+      <div className="pt-20 p-20">
         <div className="flex gap-20 justify-between mx-auto max-w-4xl">
           <Card
             icon={<AiFillCustomerService />}

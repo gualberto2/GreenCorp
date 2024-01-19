@@ -15,15 +15,15 @@ export default function Navbar() {
 
   return (
     <div
-      className={`flex justify-center w-full ${
-        isTop ? "h-16 bg-white" : "bg-gray-50"
-      } transition-all duration-300 ease-in-out`}
+      className={`flex justify-around text-black p-6 items-center transition-all duration-300 ease-in-out ${
+        isTop ? "" : "scrolled"
+      }`}
+      id="navbar"
     >
       <div
         className={`flex justify-around text-black p-4 items-center transition-all duration-300 ease-in-out ${
           isTop ? "" : "scrolled"
         }`}
-        id="navbar"
       >
         <h1 className="text-lg">KNJ Green Corp</h1>
         <ul className="flex space-x-20 text-md items-center">
