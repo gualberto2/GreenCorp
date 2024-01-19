@@ -23,7 +23,7 @@ export default function Navbar() {
       }`}
       id="navbar"
     >
-      <h1 className="text-lg">KNJ {/*Custom KNJ LOGO*/}</h1>
+      <h1 className="text-4xl font-display">KNJ {/*Custom KNJ LOGO*/}</h1>
       <div
         className={`flex justify-around text-black p-4 items-center transition-all duration-300 ease-in-out ${
           isTop ? "" : "scrolled"

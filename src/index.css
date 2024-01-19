@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 #navbar {
+  font-weight: bold;
   position: fixed;
   top: 0;
   width: 100%;
