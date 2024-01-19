@@ -20,10 +20,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center w-full bg-gray-50">
       {/* The parent div of the entire component ABOVE */}
       <div
-        className="flex justify-around text-white p-4 items-center rounded-full mt-4"
+        className="flex justify-around text-black p-4 items-center"
         id="navbar"
       >
         {/* The PARENT div of the navigation bar is ABOVE*/}
@@ -34,7 +34,7 @@ export default function Navbar() {
           <li className="hover:cursor-pointer">Products</li>
           <li className="hover:cursor-pointer">Services</li>
           <li className="hover:cursor-pointer">
-            <button className="border-1 border-blue-400 bg-green-500 p-2 rounded-xl hover:bg-green-700">
+            <button className=" text-white border-1 border-blue-400 bg-green-500 p-2 rounded-xl hover:bg-green-700">
               Contact
             </button>
           </li>
