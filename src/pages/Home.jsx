@@ -2,6 +2,7 @@ import React from "react";
 
 // Card Imports:
 import Card from "../components/Card";
+import ProductCards from "../components/ProductCards";
 
 // Icon imports:
 import { AiFillCustomerService } from "react-icons/ai";
@@ -37,6 +38,12 @@ export default function Home() {
           Our mission is to help customers reduce their environmental footprint
           while improving their bottom line.
         </p>
+      </div>
+      {/* Products cards below */}
+      <div>
+        <ProductCards />
+        <ProductCards />
+        <ProductCards />
       </div>
     </div>
   );
