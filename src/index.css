@@ -41,3 +41,20 @@
   background-size: cover; /* Makes the image scale to cover the element */
   background-position: center; /* Centers the background image */
 }
+
+.plus-sign {
+  position: absolute;
+  font-size: 24px;
+  color: #fff; /* Adjust the color as needed */
+  transform: translate(-50%, -50%);
+}
+
+.left {
+  top: 0;
+  left: 0;
+}
+
+.right {
+  top: 0;
+  right: 0;
+}

@@ -12,7 +12,20 @@ import { FaRecycle } from "react-icons/fa";
 export default function Home() {
   return (
     <div>
-      <div className="hero-bg h-screen">{/* Background image here */}</div>
+      <div className="hero-bg h-screen flex items-center justify-center">
+        <div className="grid grid-cols-4 grid-rows-9 gap-12 text-white">
+          <div className="border-2 border-slat-400 row-start-3 row-end-5 flex flex-col items-center justify-center p-6 relative">
+            <span className="plus-sign left">+</span>
+            <p className="font-thin text-4xl">200 Tons</p>
+            <p className="pt-6 text-lg">Recycled plastic per year</p>
+            <span className="plus-sign right">+</span>
+          </div>
+          <div className="border-2 border-slate-400 row-start-5 row-end-7 flex flex-col items-center justify-center p-6">
+            <p className="font-thin text-4xl">350</p>
+            <p className="pt-6 text-lg">Employees at warehouse</p>
+          </div>
+        </div>
+      </div>
       <div className="pt-20 p-20">
         <div className="flex gap-20 justify-between mx-auto max-w-4xl">
           <Card
