@@ -13,16 +13,26 @@ export default function Home() {
   return (
     <div>
       <div className="hero-bg h-screen flex items-center justify-center">
-        <div className="grid grid-cols-4 grid-rows-9 gap-12 text-white">
-          <div className="border-2 border-slat-400 row-start-3 row-end-5 flex flex-col items-center justify-center p-6 relative">
-            <span className="plus-sign left">+</span>
-            <p className="font-thin text-4xl">200 Tons</p>
+        <div className="grid grid-cols-4 grid-rows-9 gap-12 text-white ">
+          <div className="border-2 border-slat-400 row-start-3 row-end-5 flex flex-col items-center justify-center p-6 relative shadow-black shadow-xl">
+            <span className="plus-sign left font-thin">+</span>
+            <p className="font-thin text-4xl ">200 Tons</p>
             <p className="pt-6 text-lg">Recycled plastic per year</p>
-            <span className="plus-sign right">+</span>
           </div>
-          <div className="border-2 border-slate-400 row-start-5 row-end-7 flex flex-col items-center justify-center p-6">
+          <div className="border-2 border-slate-400 row-start-5 row-end-7 flex flex-col items-center justify-center p-6 relative shadow-black shadow-xl">
             <p className="font-thin text-4xl">350</p>
             <p className="pt-6 text-lg">Employees at warehouse</p>
+            <span className="plus-sign right font-thin">+</span>
+          </div>
+          <div className="row-start-3 row-end-5 col-span-3">
+            <h2 className="text-6xl font-bold">
+              Making a Difference with Recycling
+            </h2>
+            <p className="text-lg my-4">
+              Southern California's premier PCR Recycling factory and
+              manufacturer, we ensure high quality while reducing your
+              environmental footprint
+            </p>
           </div>
         </div>
       </div>

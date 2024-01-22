@@ -34,7 +34,7 @@
       to bottom,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.6) 8%,
-      rgba(0, 0, 0, 0.1)
+      rgba(54, 48, 48, 0.1)
     ),
     url("https://th.bing.com/th/id/R.e3d44cbf0d403a667352b183271486fe?rik=rSqx67GOByaFAg&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2015%2f12%2f204024-road-sunset-field-Italy-clouds-grass-mountain-wildflowers-green-landscape-nature.jpg&ehk=BXynnaZJuEVj7f4iL2lViOA7yqCafPd28qizWIxqfVc%3d&risl=&pid=ImgRaw&r=0");
   background-repeat: no-repeat; /* Prevents background from repeating */
@@ -44,17 +44,22 @@
 
 .plus-sign {
   position: absolute;
-  font-size: 24px;
+  font-size: 5rem;
   color: #fff; /* Adjust the color as needed */
   transform: translate(-50%, -50%);
 }
 
 .left {
+  font-weight: bold;
   top: 0;
   left: 0;
+  bottom: 0;
 }
 
 .right {
-  top: 0;
+  font-weight: bold;
+  bottom: 10;
   right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
 }
