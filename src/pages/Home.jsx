@@ -37,6 +37,14 @@ export default function Home() {
         </div>
       </div>
       <div className="pt-20 p-20">
+        <div className="about-stuff my-14 mb-20">
+          <h2 className="font-bold text-4xl text-center">
+            How KNJ is Different
+          </h2>
+          <p className="font-thin text-lg text-center mt-4">
+            Service, Regulatory, Quality
+          </p>
+        </div>
         <div className="flex gap-20 justify-between mx-auto max-w-4xl">
           <Card
             icon={<AiFillCustomerService />}
