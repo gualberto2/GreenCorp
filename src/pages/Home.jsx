@@ -2,7 +2,7 @@ import React from "react";
 
 // Card Imports:
 import Card from "../components/Card";
-import ProductCards from "../components/ProductCards";
+import ProductSlider from "../components/ProductSlider";
 
 // Icon imports:
 import { AiFillCustomerService } from "react-icons/ai";
@@ -10,6 +10,39 @@ import { GoLaw } from "react-icons/go";
 import { FaRecycle } from "react-icons/fa";
 
 export default function Home() {
+  const products = [
+    // HDPE Below
+    {
+      img: "https://polyfit.us/img/polyfit/HDPE_PCR_BLOW_MOLD_REPRO.png",
+      title: "PCR BLOW MOLD REPRO",
+      description: "HDPE",
+    },
+    // LDPE Below
+    {
+      img: "https://polyfit.us/img/polyfit/LDPE_CLEAR_PCR_REPRO.png",
+      title: "CLEAR PCR REPRO",
+      description: "LDPE",
+    },
+    // LLDPE
+    {
+      img: "https://polyfit.us/img/polyfit/LLDPE_CLEAR_PCR_REPRO.png",
+      title: "CLEAR PCR REPRO",
+      description: "LLDPE",
+    },
+    // PP
+    {
+      img: "https://polyfit.us/img/polyfit/PP_REPRO.png",
+      title: "PP REPRO",
+      description: "PP",
+    },
+    // PS
+    {
+      img: "https://polyfit.us/img/polyfit/PS_REPRO.png",
+      title: "PS REPRO",
+      description: "PS",
+    },
+  ];
+
   return (
     <div>
       <div className="hero-bg h-screen flex items-center justify-center">
@@ -36,7 +69,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="pt-20 p-20">
+      <div className="max-w-4xl mx-auto py-20 pb-40">
         <div className="about-stuff my-14 mb-20">
           <h2 className="font-bold text-4xl text-center">
             How KNJ is Different
@@ -64,17 +97,38 @@ export default function Home() {
         </div>
       </div>
       <div className="text-center bg-slate-950 p-[10rem] text-amber-100">
-        <h1 className="text-3xl font-bold">KNJ Green Corp</h1>
-        <p className="pt-8 text-xl">
-          Our mission is to help customers reduce their environmental footprint
-          while improving their bottom line.
-        </p>
-      </div>
-      {/* Products cards below */}
-      <div>
-        <ProductCards />
-        <ProductCards />
-        <ProductCards />
+        <div>
+          <h1 className="text-4xl font-bold">Products</h1>
+        </div>
+        {/* Products cards below */}
+        <ProductSlider products={products} />
+        {/* <div className="cards"></div>
+        <ProductCards
+          img={"https://polyfit.us/img/polyfit/HDPE_PCR_BLOW_MOLD_REPRO.png"}
+          title="PCR BLOW MOLD REPRO"
+          description="HDPE"
+        />
+        <ProductCards
+          img={"https://polyfit.us/img/polyfit/LDPE_CLEAR_PCR_REPRO.png"}
+          title="CLEAR PCR REPRO"
+          description="LDPE"
+        />
+
+        <ProductCards
+          img={"https://polyfit.us/img/polyfit/LLDPE_CLEAR_PCR_REPRO.png"}
+          title="LLDPE"
+          description="Clear PCR Repro"
+        />
+        <ProductCards
+          img={"https://polyfit.us/img/polyfit/PP_REPRO.png"}
+          title="PP"
+          description=""
+        />
+        <ProductCards
+          img={"https://polyfit.us/img/polyfit/PS_REPRO.png"}
+          title="PS"
+          description=""
+        /> */}
       </div>
     </div>
   );
