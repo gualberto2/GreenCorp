@@ -69,16 +69,34 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="max-w-4xl mx-auto py-20 pb-40">
-        <div className="about-stuff my-14 mb-20">
-          <h2 className="font-bold text-4xl text-center">
-            How KNJ is Different
-          </h2>
-          <p className="font-thin text-lg text-center mt-4">
-            Service, Regulatory, Quality
-          </p>
+      <div className="max-w-6xl mx-auto ">
+        <h2 className="text-6xl font-semibold tracking-tight text-center mt-4">
+          Products
+        </h2>
+        <div className="flex flex-row justify-between py-8">
+          <div
+            id="container__left "
+            className="flex flex-col space-y-8 justify-start"
+          >
+            {/* Options */}
+            <h3 className="text-5xl tracking-tighter font-semibold hover:underline decoration-purple-500 decoration-4 cursor-pointer">
+              Roving Fabric
+            </h3>
+            <h3 className="text-5xl tracking-tighter font-semibold hover:underline decoration-purple-500 decoration-4 cursor-pointer">
+              Fiberglass Products
+            </h3>
+            <h3 className="text-5xl tracking-tighter font-semibold hover:underline decoration-purple-500 decoration-4 cursor-pointer">
+              Composite Gratings
+            </h3>
+          </div>
+          <div id="container__right">
+            <div>
+              <p>More details</p>
+              <img src="https://kmsibir.ru/upload/iblock/a85/a85a874075cd91c71c1677d06466be53.jpg" />
+            </div>
+          </div>
         </div>
-        <div className="flex gap-20 justify-between mx-auto max-w-4xl">
+        {/* <div className="flex gap-20 justify-between mx-auto max-w-4xl">
           <Card
             icon={<AiFillCustomerService />}
             title="Better Service"
@@ -94,7 +112,7 @@ export default function Home() {
             title="Hand Sorted"
             description="Get better quality products with hand sorting methods"
           />
-        </div>
+        </div> */}
       </div>
       <div className="text-center bg-slate-950 p-[10rem] text-amber-100">
         <div>
