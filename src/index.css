@@ -147,3 +147,19 @@ body {
     transform: rotateY(-90deg);
   }
 }
+
+.sliding-bar-container {
+  position: relative;
+  height: 4px; /* Height of the bar */
+  background: whitesmoke;
+}
+
+.sliding-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35%; /* Equal to the width of one card */
+  height: 100%;
+  background-color: green; /* Your choice of color */
+  transition: transform 0.3s ease-in-out; /* Smooth sliding effect */
+}

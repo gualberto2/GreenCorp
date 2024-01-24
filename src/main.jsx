@@ -10,6 +10,7 @@ import "./index.css";
 // Page imports
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
+import Footer from "./components/Footer.jsx";
 
 export default function App() {
   return (
@@ -19,8 +20,11 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/about" element={<About />} />
+
         </Routes>
+        <Footer />
       </Router>
     </>
   );

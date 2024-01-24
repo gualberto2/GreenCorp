@@ -1,7 +1,8 @@
+// Product slider, which is the carousel components, see the settings array below
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React from "react";
 import ProductCards from "./ProductCards"; // Assuming you have this import
 
 export default function ProductSlider({ products = [] }) {
