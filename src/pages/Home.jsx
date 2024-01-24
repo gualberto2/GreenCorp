@@ -64,6 +64,10 @@ export default function Home() {
   ];
 
   const hoveredImage = serviceImages.find((image) => image.id === hoveredCard);
+  const calculateTranslateX = (hoveredCard) => {
+    // Assuming each card takes up 33.33% of the space (for 3 cards)
+    return (hoveredCard - 1) * 100;
+  };
 
   return (
     <div>
@@ -106,8 +110,8 @@ export default function Home() {
             </div>
           )}
         </div>
-        <div className="col-start-7 col-end-12 justify-center">
-          <div className="flex align-bottom gap-4 hover:cursor-pointer">
+        <div className="col-start-7 col-end-13 justify-center">
+          <div className="flex gap-2 hover:cursor-pointer mt-10 mx-2">
             <Card
               onMouseEnter={() => setHoveredCard(1)}
               onMouseLeave={() => setHoveredCard(1)}
@@ -119,17 +123,25 @@ export default function Home() {
               onMouseEnter={() => setHoveredCard(2)}
               onMouseLeave={() => setHoveredCard(1)}
               icon={<AiFillCustomerService />}
-              title="Hand Sorted"
+              title="Quality"
               description="Our team of 150 hand sorters ensure high quality products"
             />
             <Card
               onMouseEnter={() => setHoveredCard(3)}
               onMouseLeave={() => setHoveredCard(1)}
               icon={<GoLaw />}
-              title="CA Regulation & Mix Ratio"
+              title="Mix"
               description="Increase ESG Scores with 80% Virgin & 20% Recycled Products"
             />
           </div>
+        </div>
+        <div className="sliding-bar-container col-start-7 col-end-13">
+          <div
+            className="sliding-bar pt-2"
+            style={{
+              transform: `translateX(${calculateTranslateX(hoveredCard)}%)`,
+            }}
+          ></div>
         </div>
       </div>
       {/* Products */}
