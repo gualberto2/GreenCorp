@@ -1,3 +1,5 @@
+// Product cards component, got to go add to the array in the home this just changes the layout and UI
+
 import React from "react";
 
 const ProductCards = ({ img, title, description }) => {

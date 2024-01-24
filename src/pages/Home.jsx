@@ -3,6 +3,7 @@ import React from "react";
 // Card Imports:
 import Card from "../components/Card";
 import ProductSlider from "../components/ProductSlider";
+import AboutImages from "../components/AboutImages";
 
 // Icon imports:
 import { AiFillCustomerService } from "react-icons/ai";
@@ -43,6 +44,21 @@ export default function Home() {
     },
   ];
 
+  const images = [
+    {
+      img: "https://polyfit.us/img/polyfit/recyclying.jpg",
+      id: 1,
+    },
+    {
+      img: "https://www.ecoenclose.com/product_images/uploaded_images/rubbish-removal.jpg",
+      id: 2,
+    },
+    {
+      img: "https://polyfit.us/img/polyfit/destruction.jpg",
+      id: 3,
+    },
+  ];
+
   return (
     <div>
       <div className="hero-bg h-screen flex items-center justify-center">
@@ -69,8 +85,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="max-w-4xl mx-auto py-20 pb-40">
-        <div className="about-stuff my-14 mb-20">
+      {/* About & Services */}
+      <div className="mx-auto">
+        <div className="about-stuff my-14">
           <h2 className="font-bold text-4xl text-center">
             How KNJ is Different
           </h2>
@@ -78,57 +95,38 @@ export default function Home() {
             Service, Regulatory, Quality
           </p>
         </div>
-        <div className="flex gap-20 justify-between mx-auto max-w-4xl">
-          <Card
-            icon={<AiFillCustomerService />}
-            title="Better Service"
-            description="Our team is dedicated to getting you the best service"
-          />
-          <Card
-            icon={<GoLaw />}
-            title="CA Regulation"
-            description="Our products help you maintain CA recycling compliance"
-          />
-          <Card
-            icon={<FaRecycle />}
-            title="Hand Sorted"
-            description="Get better quality products with hand sorting methods"
-          />
+        <div className="grid grid-cols-12 grid-rows-1">
+          <div className="col-start-1 col-end-6">
+            <AboutImages images={images} />
+          </div>
+          <div className="col-start-7 col-end-12">
+            <div className="flex align-bottom gap-4 shadow-slate-300 shadow-md">
+              <Card
+                icon={<FaRecycle />}
+                title="Recycling"
+                description="Together we reduce carbon footprints by collecting your recycable materials"
+              />
+              <Card
+                icon={<AiFillCustomerService />}
+                title="Hand Sorted"
+                description="Our team of 150 hand sorters ensure high quality products"
+              />
+              <Card
+                icon={<GoLaw />}
+                title="CA Regulation & Mix Ratio"
+                description="Increase ESG Scores with 80% Virgin & 20% Recycled Products"
+              />
+            </div>
+          </div>
         </div>
       </div>
+      {/* Products */}
       <div className="text-center bg-slate-950 p-[10rem] text-amber-100">
         <div>
           <h1 className="text-4xl font-bold">Products</h1>
         </div>
         {/* Products cards below */}
         <ProductSlider products={products} />
-        {/* <div className="cards"></div>
-        <ProductCards
-          img={"https://polyfit.us/img/polyfit/HDPE_PCR_BLOW_MOLD_REPRO.png"}
-          title="PCR BLOW MOLD REPRO"
-          description="HDPE"
-        />
-        <ProductCards
-          img={"https://polyfit.us/img/polyfit/LDPE_CLEAR_PCR_REPRO.png"}
-          title="CLEAR PCR REPRO"
-          description="LDPE"
-        />
-
-        <ProductCards
-          img={"https://polyfit.us/img/polyfit/LLDPE_CLEAR_PCR_REPRO.png"}
-          title="LLDPE"
-          description="Clear PCR Repro"
-        />
-        <ProductCards
-          img={"https://polyfit.us/img/polyfit/PP_REPRO.png"}
-          title="PP"
-          description=""
-        />
-        <ProductCards
-          img={"https://polyfit.us/img/polyfit/PS_REPRO.png"}
-          title="PS"
-          description=""
-        /> */}
       </div>
     </div>
   );
