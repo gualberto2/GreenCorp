@@ -2,11 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide scrollbar for IE, Edge and Firefox */
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+*/ ::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #6366f1;
+}
+
+::selection {
+  color: white;
+  background: #6366f1;
+}
+
 #navbar {
   font-weight: bold;
-  position: fixed;
+
   top: 0;
-  width: 100%;
+
   height: 24px; /* Full viewport height by default */
   background-color: rgba(
     255,
@@ -42,28 +61,6 @@
   background-position: center; /* Centers the background image */
 }
 
-.plus-sign {
-  position: absolute;
-  font-size: 5rem;
-  color: #fff; /* Adjust the color as needed */
-  transform: translate(-50%, -50%);
-}
-
-.left {
-  font-weight: bold;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-
-.right {
-  font-weight: bold;
-  bottom: 10;
-  right: 0;
-  top: 0;
-  transform: translate(50%, -50%);
-}
-
 /* Products home page styling */
 
 .arrow-spin {
@@ -96,7 +93,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(20px);
+    transform: translateX(10px);
   }
 }
 
