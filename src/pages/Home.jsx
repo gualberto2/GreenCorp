@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Card Imports:
 import Card from "../components/Card";
 import ProductSlider from "../components/ProductSlider";
-import AboutImages from "../components/AboutImages";
+// import AboutImages from "../components/AboutImages";
 
 // Icon imports:
 import { AiFillCustomerService } from "react-icons/ai";
@@ -11,6 +11,9 @@ import { GoLaw } from "react-icons/go";
 import { FaRecycle } from "react-icons/fa";
 
 export default function Home() {
+  // Below is state for the about us / services card section
+  const [hoveredCard, setHoveredCard] = useState(1);
+
   const products = [
     // HDPE Below
     {
@@ -44,7 +47,8 @@ export default function Home() {
     },
   ];
 
-  const images = [
+  // Service images
+  const serviceImages = [
     {
       img: "https://polyfit.us/img/polyfit/recyclying.jpg",
       id: 1,
@@ -58,6 +62,8 @@ export default function Home() {
       id: 3,
     },
   ];
+
+  const hoveredImage = serviceImages.find((image) => image.id === hoveredCard);
 
   return (
     <div>
@@ -95,23 +101,39 @@ export default function Home() {
             Service, Regulatory, Quality
           </p>
         </div>
-        <div className="grid grid-cols-12 grid-rows-1">
-          <div className="col-start-1 col-end-6">
-            <AboutImages images={images} />
+        <div className="grid grid-cols-12 grid-rows-1 items-center justify-center pb-20">
+          <div className="col-start-2 col-end-6">
+            {/* Conditional Images will go HERE!! */}
+            {hoveredImage && (
+              <div className="h-64 overflow-hidden">
+                {/* Adjust height as needed */}
+                <img
+                  src={hoveredImage.img}
+                  alt={`Service ${hoveredCard}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
           </div>
-          <div className="col-start-7 col-end-12">
-            <div className="flex align-bottom gap-4 shadow-slate-300 shadow-md">
+          <div className="col-start-7 col-end-12 justify-center">
+            <div className="flex align-bottom gap-4 hover:cursor-pointer">
               <Card
+                onMouseEnter={() => setHoveredCard(1)}
+                onMouseLeave={() => setHoveredCard(1)}
                 icon={<FaRecycle />}
                 title="Recycling"
                 description="Together we reduce carbon footprints by collecting your recycable materials"
               />
               <Card
+                onMouseEnter={() => setHoveredCard(2)}
+                onMouseLeave={() => setHoveredCard(1)}
                 icon={<AiFillCustomerService />}
                 title="Hand Sorted"
                 description="Our team of 150 hand sorters ensure high quality products"
               />
               <Card
+                onMouseEnter={() => setHoveredCard(3)}
+                onMouseLeave={() => setHoveredCard(1)}
                 icon={<GoLaw />}
                 title="CA Regulation & Mix Ratio"
                 description="Increase ESG Scores with 80% Virgin & 20% Recycled Products"
