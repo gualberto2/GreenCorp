@@ -189,8 +189,8 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <div className=" flex items-center justify-center">
-        <div className="hero-bg h-screen flex flex-col md:grid md:grid-cols-8 lg:grid-cols-12  grid-rows-6   p-8 text-white ">
-          <div className="col-start-5 col-end-12 row-start-2 row-end-5 mb-4 md:mb-0">
+        <div className="hero-bg h-screen flex flex-col md:grid md:grid-cols-8 lg:grid-cols-8  grid-rows-6   p-8 text-white ">
+          <div className="col-start-4 col-end-9 row-start-2 row-end-5 mb-4 md:mb-0 ml-10">
             <h2 className="text-5xl tracking-tighter mb-1 md:mb-0 px-2 md:px-4 md:mt-8 font-bold">
               Making a Difference with Recycling
             </h2>
@@ -200,24 +200,24 @@ export default function Home() {
               environmental footprint
             </p>
           </div>
-          <div className="border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-2 row-end-3 flex flex-col items-center justify-center p-6 relative  shadow-xl">
+          <div className="border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-2 row-end-3 flex flex-col items-center justify-center p-6 relative  shadow-sm shadow-black">
             <span className="absolute -right-5 -top-9  font-thin text-6xl">
               +
             </span>
-            <p className="font-normal text-4xl">350+</p>
-            <p className="pt-6 font-light text-lg">Employees at warehouse</p>
+            <p className="font-light text-4xl">350+</p>
+            <p className="pt-4 text-lg">Employees at warehouse</p>
           </div>
-          <div className=" border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-3 row-end-4  flex flex-col items-center justify-center p-6 relative  shadow-xl">
+          <div className=" border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-3 row-end-4  flex flex-col items-center justify-center p-6 relative  shadow-lg shadow-black">
             <span className="absolute -left-5 -top-8  font-thin text-6xl">
               +
             </span>
-            <p className="font-medium text-4xl ">200 Tons</p>
-            <p className="pt-6 font-light text-lg">Recycled plastic per year</p>
+            <p className="font-light text-4xl ">200 Tons</p>
+            <p className="pt-4 text-lg">Recycled plastic per year</p>
           </div>
-          <div className=" border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-4 row-end-5  flex flex-col items-center justify-center p-6 relative  shadow-xl">
+          <div className=" border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-4 row-end-5  flex flex-col items-center justify-center p-6 relative  shadow-xl shadow-black">
             <span className="absolute -right-5   font-thin text-6xl">+</span>
-            <p className="font-medium text-4xl ">13+</p>
-            <p className="pt-6 font-light text-lg">Types of recyclables</p>
+            <p className="font-light text-4xl ">13+</p>
+            <p className="pt-4 text-lg">Types of recyclables</p>
           </div>
         </div>
       </div>

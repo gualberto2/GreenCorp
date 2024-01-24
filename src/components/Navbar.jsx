@@ -34,7 +34,7 @@ export default function Navbar() {
         <ul
           className={`flex flex-col md:flex-row justify-center items-center fixed md:static bg-white md:bg-transparent w-full`}
         >
-          <ul className="flex flex-col md:flex-row md:space-x-20 text-md items-center">
+          <ul className="flex flex-col md:flex-row md:space-x-20 text-md items-center font-semibold">
             <li className="hover:cursor-pointer">Home</li>
             <li className="hover:cursor-pointer">
               <Link to="/about">About</Link>
