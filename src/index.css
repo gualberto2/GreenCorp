@@ -2,11 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide scrollbar for IE, Edge and Firefox */
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+*/ ::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #6366f1;
+}
+
+::selection {
+  color: white;
+  background: #6366f1;
+}
+
 #navbar {
   font-weight: bold;
-  position: fixed;
+
   top: 0;
-  width: 100%;
+
   height: 24px; /* Full viewport height by default */
   background-color: rgba(
     255,
@@ -15,7 +34,7 @@
     0.7
   ); /* Or any other color you prefer */
   transition: height 0.3s, background-color 0.3s; /* Smooth transition for height and background-color */
-  z-index: 1000;
+  z-index: 500;
 }
 
 #navbar.scrolled {
@@ -42,26 +61,91 @@
   background-position: center; /* Centers the background image */
 }
 
-.plus-sign {
-  position: absolute;
-  font-size: 5rem;
-  color: #fff; /* Adjust the color as needed */
-  transform: translate(-50%, -50%);
+/* Products home page styling */
+
+.arrow-spin {
+  animation: spin 1s ease;
 }
 
-.left {
-  font-weight: bold;
+/* Apply a permanent translation to the active item */
+.active-text {
+  transform: translateX(20px);
+}
+
+/* Animation for sliding in */
+.slide-text {
+  animation: slideText 1s ease forwards;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1080deg); /* 360 degrees * 3 */
+  }
+}
+
+/* Slide animation */
+@keyframes slideText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+/* Box folding animation */
+
+.animation-wrapper {
+  position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+  background: transparent;
 }
 
-.right {
-  font-weight: bold;
-  bottom: 10;
-  right: 0;
+.panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: green;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#animationWrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
   top: 0;
-  transform: translate(50%, -50%);
+  left: 0;
+  perspective: 1000px;
+}
+
+.box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: limegreen;
+  transform-style: preserve-3d;
+}
+
+.animate {
+  animation: foldBox 1s forwards;
+}
+
+@keyframes foldBox {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-90deg);
+  }
 }
 
 .sliding-bar-container {
