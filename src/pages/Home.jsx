@@ -1,15 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Card Imports:
 import Card from "../components/Card";
 import ProductSlider from "../components/ProductSlider";
 
 // Icon imports:
+import { IoMdArrowDropright } from "react-icons/io";
+
 import { AiFillCustomerService } from "react-icons/ai";
 import { GoLaw } from "react-icons/go";
 import { FaRecycle } from "react-icons/fa";
 
 export default function Home() {
+  const [activeItem, setActiveItem] = useState("Roving Fabric");
+
+  const renderItemContent = () => {
+    switch (activeItem) {
+      case "Roving Fabric":
+        return (
+          <div className="flex flex-row">
+            <p className="text-">More details</p>
+            <img src="https://kmsibir.ru/upload/iblock/a85/a85a874075cd91c71c1677d06466be53.jpg" />
+          </div>
+        );
+      case "Fiberglass Products":
+        return (
+          <div className="flex flex-row">
+            <p>ISO PFR</p>
+            <p>FD PFR</p>
+            <p>ECO FR</p>
+            <img src="https://kmsibir.ru/upload/iblock/49f/ghajzvo7zhr9mgajdqouamu7fgqq4k0j.png" />
+          </div>
+        );
+      case "Composite Gratings":
+        return (
+          <div className="flex flex-row">
+            <div>
+              <p>Profile</p>
+              <p>Shveler</p>
+              <p>Pipe</p>
+              <p>Fastenings</p>
+            </div>
+            <img src="https://kmsibir.ru/upload/iblock/033/03332876d2300a8bc67e8b14a9b1f754.jpg" />
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
   const products = [
     // HDPE Below
     {
@@ -69,50 +108,40 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto ">
+      <div className="max-w-6xl mx-auto h-[500px]">
         <h2 className="text-6xl font-semibold tracking-tight text-center mt-4">
           Products
         </h2>
-        <div className="flex flex-row justify-between py-8">
+        <div className="flex flex-row justify-between py-8 ">
           <div
             id="container__left "
             className="flex flex-col space-y-8 justify-start"
           >
-            {/* Options */}
-            <h3 className="text-5xl tracking-tighter font-semibold hover:underline decoration-purple-500 decoration-4 cursor-pointer">
-              Roving Fabric
-            </h3>
-            <h3 className="text-5xl tracking-tighter font-semibold hover:underline decoration-purple-500 decoration-4 cursor-pointer">
-              Fiberglass Products
-            </h3>
-            <h3 className="text-5xl tracking-tighter font-semibold hover:underline decoration-purple-500 decoration-4 cursor-pointer">
-              Composite Gratings
-            </h3>
+            {["Roving Fabric", "Fiberglass Products", "Composite Gratings"].map(
+              (item) => (
+                <div
+                  key={item}
+                  onClick={() => setActiveItem(item)}
+                  className={`flex items-center cursor-pointer ${
+                    activeItem === item ? "slide-text" : "text-gray-400"
+                  }`}
+                >
+                  {activeItem === item && (
+                    <IoMdArrowDropright className="mr-2 arrow-spin" />
+                  )}
+                  <h3
+                    className={`text-5xl tracking-tighter font-semibold hover:underline decoration-purple-500 decoration-4 ${
+                      activeItem === item ? "" : "hover:text-animation"
+                    }`}
+                  >
+                    {item}
+                  </h3>
+                </div>
+              )
+            )}
           </div>
-          <div id="container__right">
-            <div>
-              <p>More details</p>
-              <img src="https://kmsibir.ru/upload/iblock/a85/a85a874075cd91c71c1677d06466be53.jpg" />
-            </div>
-          </div>
+          <div id="container__right">{renderItemContent()}</div>
         </div>
-        {/* <div className="flex gap-20 justify-between mx-auto max-w-4xl">
-          <Card
-            icon={<AiFillCustomerService />}
-            title="Better Service"
-            description="Our team is dedicated to getting you the best service"
-          />
-          <Card
-            icon={<GoLaw />}
-            title="CA Regulation"
-            description="Our products help you maintain CA recycling compliance"
-          />
-          <Card
-            icon={<FaRecycle />}
-            title="Hand Sorted"
-            description="Get better quality products with hand sorting methods"
-          />
-        </div> */}
       </div>
       <div className="text-center bg-slate-950 p-[10rem] text-amber-100">
         <div>
