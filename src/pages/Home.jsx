@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 
-// Card Imports:
-import Card from "../components/Card";
-import ProductSlider from "../components/ProductSlider";
-
-// Icon imports:
 import { IoMdArrowDropright } from "react-icons/io";
-
-import { AiFillCustomerService } from "react-icons/ai";
-import { GoLaw } from "react-icons/go";
-import { FaRecycle } from "react-icons/fa";
+import { FaArrowRightToBracket } from "react-icons/fa6";
 
 export default function Home() {
   const [activeItem, setActiveItem] = useState("Roving Fabric");
@@ -19,27 +11,79 @@ export default function Home() {
       case "Roving Fabric":
         return (
           <div className="flex flex-row">
-            <p className="text-">More details</p>
+            <div className="flex flex-row justify-between gap-2 items-center">
+              <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                <FaArrowRightToBracket />
+              </div>
+              <p className="text-2xl  font-medium tracking-wide lowercase">
+                ISO PFR
+              </p>
+            </div>
             <img src="https://kmsibir.ru/upload/iblock/a85/a85a874075cd91c71c1677d06466be53.jpg" />
           </div>
         );
       case "Fiberglass Products":
         return (
           <div className="flex flex-row">
-            <p>ISO PFR</p>
-            <p>FD PFR</p>
-            <p>ECO FR</p>
+            <div className="flex flex-col gap-8">
+              <div className="flex flex-row justify-between gap-2 items-center">
+                <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <FaArrowRightToBracket />
+                </div>
+                <p className="text-2xl  font-medium tracking-wide lowercase">
+                  ISO PFR
+                </p>
+              </div>
+              <div className="flex flex-row justify-between gap-2 items-center">
+                <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <FaArrowRightToBracket />
+                </div>
+                <p className="text-2xl  font-medium tracking-wide lowercase">
+                  FD PFR
+                </p>
+              </div>
+              <div className="flex flex-row  justify-between gap-2 items-center">
+                <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <FaArrowRightToBracket />
+                </div>
+                <p className="text-2xl  font-medium tracking-wide lowercase">
+                  ECO FR
+                </p>
+              </div>
+            </div>
             <img src="https://kmsibir.ru/upload/iblock/49f/ghajzvo7zhr9mgajdqouamu7fgqq4k0j.png" />
           </div>
         );
       case "Composite Gratings":
         return (
           <div className="flex flex-row">
-            <div>
-              <p>Profile</p>
-              <p>Shveler</p>
-              <p>Pipe</p>
-              <p>Fastenings</p>
+            <div className="text-2xl pt-8 font-medium tracking-wide lowercase flex flex-col">
+              <div className="flex flex-col gap-8">
+                <div className="flex flex-row justify-between gap-2 items-center">
+                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                    <FaArrowRightToBracket />
+                  </div>
+                  <p className="text-2xl  font-medium tracking-wide lowercase">
+                    ISO PFR
+                  </p>
+                </div>
+                <div className="flex flex-row justify-between gap-2 items-center">
+                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                    <FaArrowRightToBracket />
+                  </div>
+                  <p className="text-2xl  font-medium tracking-wide lowercase">
+                    FD PFR
+                  </p>
+                </div>
+                <div className="flex flex-row  justify-between gap-2 items-center">
+                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                    <FaArrowRightToBracket />
+                  </div>
+                  <p className="text-2xl  font-medium tracking-wide lowercase">
+                    ECO FR
+                  </p>
+                </div>
+              </div>
             </div>
             <img src="https://kmsibir.ru/upload/iblock/033/03332876d2300a8bc67e8b14a9b1f754.jpg" />
           </div>
@@ -48,39 +92,6 @@ export default function Home() {
         return null;
     }
   };
-
-  const products = [
-    // HDPE Below
-    {
-      img: "https://polyfit.us/img/polyfit/HDPE_PCR_BLOW_MOLD_REPRO.png",
-      title: "PCR BLOW MOLD REPRO",
-      description: "HDPE",
-    },
-    // LDPE Below
-    {
-      img: "https://polyfit.us/img/polyfit/LDPE_CLEAR_PCR_REPRO.png",
-      title: "CLEAR PCR REPRO",
-      description: "LDPE",
-    },
-    // LLDPE
-    {
-      img: "https://polyfit.us/img/polyfit/LLDPE_CLEAR_PCR_REPRO.png",
-      title: "CLEAR PCR REPRO",
-      description: "LLDPE",
-    },
-    // PP
-    {
-      img: "https://polyfit.us/img/polyfit/PP_REPRO.png",
-      title: "PP REPRO",
-      description: "PP",
-    },
-    // PS
-    {
-      img: "https://polyfit.us/img/polyfit/PS_REPRO.png",
-      title: "PS REPRO",
-      description: "PS",
-    },
-  ];
 
   return (
     <div>
@@ -147,35 +158,6 @@ export default function Home() {
         <div>
           <h1 className="text-4xl font-bold">Products</h1>
         </div>
-        {/* Products cards below */}
-        <ProductSlider products={products} />
-        {/* <div className="cards"></div>
-        <ProductCards
-          img={"https://polyfit.us/img/polyfit/HDPE_PCR_BLOW_MOLD_REPRO.png"}
-          title="PCR BLOW MOLD REPRO"
-          description="HDPE"
-        />
-        <ProductCards
-          img={"https://polyfit.us/img/polyfit/LDPE_CLEAR_PCR_REPRO.png"}
-          title="CLEAR PCR REPRO"
-          description="LDPE"
-        />
-
-        <ProductCards
-          img={"https://polyfit.us/img/polyfit/LLDPE_CLEAR_PCR_REPRO.png"}
-          title="LLDPE"
-          description="Clear PCR Repro"
-        />
-        <ProductCards
-          img={"https://polyfit.us/img/polyfit/PP_REPRO.png"}
-          title="PP"
-          description=""
-        />
-        <ProductCards
-          img={"https://polyfit.us/img/polyfit/PS_REPRO.png"}
-          title="PS"
-          description=""
-        /> */}
       </div>
     </div>
   );

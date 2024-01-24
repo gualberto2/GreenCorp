@@ -70,19 +70,27 @@
   animation: spin 1s ease;
 }
 
-.slide-text {
-  animation: slideText 1s ease;
+/* Apply a permanent translation to the active item */
+.active-text {
+  transform: translateX(20px);
 }
 
+/* Animation for sliding in */
+.slide-text {
+  animation: slideText 1s ease forwards;
+}
+
+/* Spin animation */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(1080deg);
-  } /* 360 degrees * 3 */
+    transform: rotate(1080deg); /* 360 degrees * 3 */
+  }
 }
 
+/* Slide animation */
 @keyframes slideText {
   0% {
     transform: translateX(0);
