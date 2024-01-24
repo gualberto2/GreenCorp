@@ -76,11 +76,12 @@ export default function Home() {
 
   const renderItemContent = () => {
     switch (activeItem) {
-      case "Roving Fabric":
+      /* HDPE Listings */
+      case "HDPE":
         return (
           <div className="flex flex-col md:flex-row justify-start">
             <div className="flex flex-row justify-center gap-2 items-center">
-              <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+              <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                 <FaArrowRightToBracket />
               </div>
               <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -93,13 +94,13 @@ export default function Home() {
             />
           </div>
         );
-
-      case "Fiberglass Products":
+      /* LDPE Product Listings */
+      case "LDPE":
         return (
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col gap-8">
               <div className="flex flex-row justify-center gap-2 items-center">
-                <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                   <FaArrowRightToBracket />
                 </div>
                 <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -107,7 +108,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-row justify-center gap-2 items-center">
-                <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                   <FaArrowRightToBracket />
                 </div>
                 <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -115,7 +116,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-row  justify-center gap-2 items-center">
-                <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                   <FaArrowRightToBracket />
                 </div>
                 <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -129,13 +130,14 @@ export default function Home() {
             />
           </div>
         );
-      case "Composite Gratings":
+      /* LLDPE Product Listings */
+      case "LLDPE":
         return (
           <div className="flex flex-col md:flex-row">
             <div className="text-2xl pt-8 font-medium tracking-wide lowercase flex flex-col">
               <div className="flex flex-col gap-8">
                 <div className="flex flex-row justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -143,7 +145,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-row justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -151,7 +153,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-row  justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -159,7 +161,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-row  justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -167,7 +169,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-row  justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -179,6 +181,43 @@ export default function Home() {
             <img
               className="max-w-full h-auto"
               src="https://kmsibir.ru/upload/iblock/033/03332876d2300a8bc67e8b14a9b1f754.jpg"
+            />
+          </div>
+        );
+      /* PP Product Listings */
+      case "PP":
+        return (
+          <div className="flex flex-col md:flex-row justify-start">
+            <div className="flex flex-row justify-center gap-2 items-center">
+              <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
+                <FaArrowRightToBracket />
+              </div>
+              <p className="text-2xl  font-medium tracking-wide lowercase">
+                ISO PFR
+              </p>
+            </div>
+            <img
+              className="max-w-full h-auto"
+              src="https://kmsibir.ru/upload/iblock/a85/a85a874075cd91c71c1677d06466be53.jpg"
+            />
+          </div>
+        );
+
+      /* PS Product Listings */
+      case "PS":
+        return (
+          <div className="flex flex-col md:flex-row justify-start">
+            <div className="flex flex-row justify-center gap-2 items-center">
+              <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
+                <FaArrowRightToBracket />
+              </div>
+              <p className="text-2xl  font-medium tracking-wide lowercase">
+                ISO PFR
+              </p>
+            </div>
+            <img
+              className="max-w-full h-auto"
+              src="https://kmsibir.ru/upload/iblock/a85/a85a874075cd91c71c1677d06466be53.jpg"
             />
           </div>
         );
@@ -204,7 +243,7 @@ export default function Home() {
             <span className="absolute -right-5 -top-9  font-thin text-6xl">
               +
             </span>
-            <p className="font-light text-4xl">350+</p>
+            <p className="font-light text-4xl">350 +</p>
             <p className="pt-4 text-lg">Employees at warehouse</p>
           </div>
           <div className=" border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-3 row-end-4  flex flex-col items-center justify-center p-6 relative  shadow-lg shadow-black">
@@ -216,7 +255,7 @@ export default function Home() {
           </div>
           <div className=" border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-4 row-end-5  flex flex-col items-center justify-center p-6 relative  shadow-xl shadow-black">
             <span className="absolute -right-5   font-thin text-6xl">+</span>
-            <p className="font-light text-4xl ">13+</p>
+            <p className="font-light text-4xl ">13 +</p>
             <p className="pt-4 text-lg">Types of recyclables</p>
           </div>
         </div>
@@ -233,11 +272,7 @@ export default function Home() {
               id="container__left"
               className="flex flex-col space-y-8 md:w-fit justify-start px-4 md:px-0 mb-8"
             >
-              {[
-                "Roving Fabric",
-                "Fiberglass Products",
-                "Composite Gratings",
-              ].map((item) => (
+              {["HDPE", "LDPE", "LLDPE", "PP", "PS"].map((item) => (
                 <div
                   key={item}
                   onClick={() => setActiveItem(item)}
@@ -249,7 +284,7 @@ export default function Home() {
                     <IoMdArrowDropright className="mr-2 arrow-spin" />
                   )}
                   <h3
-                    className={`text-5xl tracking-tighter font-semibold hover:underline decoration-purple-500 overflow-hidden decoration-4 ${
+                    className={`text-5xl tracking-tighter font-semibold hover:underline decoration-green-500 overflow-hidden decoration-4 ${
                       activeItem === item ? "" : "hover:text-animation"
                     }`}
                   >
@@ -264,7 +299,7 @@ export default function Home() {
         {/* Middle Support  */}
         <div className="w-full">
           <div className="flex flex-col md:flex-row">
-            <div className="bg-violet-500 text-white pt-12 pb-24 px-4">
+            <div className="bg-green-500 text-white pt-12 pb-24 px-4">
               <h2 className="text-3xl font-bold tracking-tight mb-1">
                 45,000 Pounds
               </h2>
@@ -330,14 +365,13 @@ export default function Home() {
             ></div>
           </div>
         </div>
-        {/* Products */}
-        <div className="text-center bg-slate-950 p-[10rem] text-amber-100">
+        {/* Products Carousels */}
+        {/* <div className="text-center bg-slate-950 p-[10rem] text-amber-100">
           <div>
             <h1 className="text-4xl font-bold">Products</h1>
           </div>
-          {/* Products cards below */}
           <ProductSlider products={products} />
-        </div>
+        </div> */}
       </div>
     </div>
   );
