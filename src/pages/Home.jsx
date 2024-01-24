@@ -50,15 +50,15 @@ export default function Home() {
   // Service images
   const serviceImages = [
     {
-      img: "https://polyfit.us/img/polyfit/recyclying.jpg",
+      img: "src/assets/KnjStockImg/1.png",
       id: 1,
     },
     {
-      img: "https://www.ecoenclose.com/product_images/uploaded_images/rubbish-removal.jpg",
+      img: "src/assets/KnjStockImg/2.png",
       id: 2,
     },
     {
-      img: "https://polyfit.us/img/polyfit/destruction.jpg",
+      img: "src/assets/KnjStockImg/3.png",
       id: 3,
     },
   ];
@@ -68,7 +68,7 @@ export default function Home() {
   return (
     <div>
       <div className="hero-bg h-screen flex items-center justify-center">
-        <div className="grid grid-cols-4 grid-rows-9 gap-12 text-white ">
+        <div className="grid grid-cols-4 grid-rows-4 gap-12 text-white ">
           <div className="border-2 border-slat-400 row-start-3 row-end-5 flex flex-col items-center justify-center p-6 relative shadow-black shadow-xl">
             <span className="plus-sign left font-thin">+</span>
             <p className="font-thin text-4xl ">200 Tons</p>
@@ -92,53 +92,43 @@ export default function Home() {
         </div>
       </div>
       {/* About & Services */}
-      <div className="mx-auto">
-        <div className="about-stuff my-14">
-          <h2 className="font-bold text-4xl text-center">
-            How KNJ is Different
-          </h2>
-          <p className="font-thin text-lg text-center mt-4">
-            Service, Regulatory, Quality
-          </p>
-        </div>
-        <div className="grid grid-cols-12 grid-rows-1 items-center justify-center pb-20">
-          <div className="col-start-2 col-end-6">
-            {/* Conditional Images will go HERE!! */}
-            {hoveredImage && (
-              <div className="h-64 overflow-hidden">
-                {/* Adjust height as needed */}
-                <img
-                  src={hoveredImage.img}
-                  alt={`Service ${hoveredCard}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-          </div>
-          <div className="col-start-7 col-end-12 justify-center">
-            <div className="flex align-bottom gap-4 hover:cursor-pointer">
-              <Card
-                onMouseEnter={() => setHoveredCard(1)}
-                onMouseLeave={() => setHoveredCard(1)}
-                icon={<FaRecycle />}
-                title="Recycling"
-                description="Together we reduce carbon footprints by collecting your recycable materials"
-              />
-              <Card
-                onMouseEnter={() => setHoveredCard(2)}
-                onMouseLeave={() => setHoveredCard(1)}
-                icon={<AiFillCustomerService />}
-                title="Hand Sorted"
-                description="Our team of 150 hand sorters ensure high quality products"
-              />
-              <Card
-                onMouseEnter={() => setHoveredCard(3)}
-                onMouseLeave={() => setHoveredCard(1)}
-                icon={<GoLaw />}
-                title="CA Regulation & Mix Ratio"
-                description="Increase ESG Scores with 80% Virgin & 20% Recycled Products"
+      <div className="grid grid-cols-12 grid-rows-1">
+        <div className="col-start-1 col-end-7 row-start-0">
+          {/* Conditional Images will go HERE!! */}
+          {hoveredImage && (
+            <div className="h-[100%] overflow-clip">
+              {/* Adjust height as needed */}
+              <img
+                src={hoveredImage.img}
+                alt={`Service ${hoveredCard}`}
+                className="w-full h-full object-cover"
               />
             </div>
+          )}
+        </div>
+        <div className="col-start-7 col-end-12 justify-center">
+          <div className="flex align-bottom gap-4 hover:cursor-pointer">
+            <Card
+              onMouseEnter={() => setHoveredCard(1)}
+              onMouseLeave={() => setHoveredCard(1)}
+              icon={<FaRecycle />}
+              title="Recycling"
+              description="Together we reduce carbon footprints by collecting your recycable materials"
+            />
+            <Card
+              onMouseEnter={() => setHoveredCard(2)}
+              onMouseLeave={() => setHoveredCard(1)}
+              icon={<AiFillCustomerService />}
+              title="Hand Sorted"
+              description="Our team of 150 hand sorters ensure high quality products"
+            />
+            <Card
+              onMouseEnter={() => setHoveredCard(3)}
+              onMouseLeave={() => setHoveredCard(1)}
+              icon={<GoLaw />}
+              title="CA Regulation & Mix Ratio"
+              description="Increase ESG Scores with 80% Virgin & 20% Recycled Products"
+            />
           </div>
         </div>
       </div>
