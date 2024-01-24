@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AboutImgsBg from "./AboutImgsBg";
 
-export default function AboutImages({ images = [] }) {
+export default function AboutImages({ images, hoveredCard }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -21,7 +21,12 @@ export default function AboutImages({ images = [] }) {
     //
     <Slider {...settings}>
       {images.map((image, index) => (
-        <AboutImgsBg key={index} img={image.img} />
+        <div
+          key={index}
+          style={{ display: hoveredCard === image.id ? "block" : "none" }}
+        >
+          <AboutImgsBg img={image.img} />
+        </div>
       ))}
     </Slider>
     //
