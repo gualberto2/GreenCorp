@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import react, { useState, useEffect } from "react";
+
+import { Link } from "react-router-dom";
 
 // Icon import:
 import { BsFillTelephoneFill } from "react-icons/bs";
@@ -31,7 +33,9 @@ export default function Navbar() {
       >
         <ul className="flex space-x-20 text-md items-center">
           <li className="hover:cursor-pointer">Home</li>
-          <li className="hover:cursor-pointer">About</li>
+          <li className="hover:cursor-pointer">
+            <Link to="/about">About</Link>
+          </li>
           <li className="hover:cursor-pointer">Products</li>
           <li className="hover:cursor-pointer">Services</li>
           <li className="hover:cursor-pointer flex items-center">
