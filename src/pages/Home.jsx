@@ -89,8 +89,8 @@ export default function Home() {
               </p>
             </div>
             <img
-              className="max-w-full h-auto"
-              src="https://kmsibir.ru/upload/iblock/a85/a85a874075cd91c71c1677d06466be53.jpg"
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
             />
           </div>
         );
@@ -125,8 +125,8 @@ export default function Home() {
               </div>
             </div>
             <img
-              className="max-w-full h-auto"
-              src="https://kmsibir.ru/upload/iblock/49f/ghajzvo7zhr9mgajdqouamu7fgqq4k0j.png"
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
             />
           </div>
         );
@@ -179,8 +179,8 @@ export default function Home() {
               </div>
             </div>
             <img
-              className="max-w-full h-auto"
-              src="https://kmsibir.ru/upload/iblock/033/03332876d2300a8bc67e8b14a9b1f754.jpg"
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
             />
           </div>
         );
@@ -197,8 +197,8 @@ export default function Home() {
               </p>
             </div>
             <img
-              className="max-w-full h-auto"
-              src="https://kmsibir.ru/upload/iblock/a85/a85a874075cd91c71c1677d06466be53.jpg"
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
             />
           </div>
         );
@@ -216,8 +216,8 @@ export default function Home() {
               </p>
             </div>
             <img
-              className="max-w-full h-auto"
-              src="https://kmsibir.ru/upload/iblock/a85/a85a874075cd91c71c1677d06466be53.jpg"
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
             />
           </div>
         );
@@ -243,7 +243,7 @@ export default function Home() {
             <span className="absolute -right-5 -top-9  font-thin text-6xl">
               +
             </span>
-            <p className="font-light text-4xl">350 +</p>
+            <p className="font-light text-4xl">350</p>
             <p className="pt-4 text-lg">Employees at warehouse</p>
           </div>
           <div className=" border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-3 row-end-4  flex flex-col items-center justify-center p-6 relative  shadow-lg shadow-black">
@@ -255,9 +255,58 @@ export default function Home() {
           </div>
           <div className=" border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-4 row-end-5  flex flex-col items-center justify-center p-6 relative  shadow-xl shadow-black">
             <span className="absolute -right-5   font-thin text-6xl">+</span>
-            <p className="font-light text-4xl ">13 +</p>
+            <p className="font-light text-4xl ">13</p>
             <p className="pt-4 text-lg">Types of recyclables</p>
           </div>
+        </div>
+      </div>
+      {/* About & Services */}
+      <div className="grid grid-cols-12 grid-rows-1 pb-28">
+        <div className="col-start-1 col-end-7 row-start-0">
+          {/* Conditional Images will go HERE!! */}
+          {hoveredImage && (
+            <div className="h-[100%] overflow-clip">
+              {/* Adjust height as needed */}
+              <img
+                src={hoveredImage.img}
+                alt={`Service ${hoveredCard}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
+        </div>
+        <div className="col-start-7 col-end-13 justify-center">
+          <div className="flex gap-2 hover:cursor-pointer mt-10 mx-2">
+            <Card
+              onMouseEnter={() => setHoveredCard(1)}
+              onMouseLeave={() => setHoveredCard(1)}
+              icon={<FaRecycle />}
+              title="Recycling"
+              description="Together we reduce carbon footprints by collecting your recycable materials"
+            />
+            <Card
+              onMouseEnter={() => setHoveredCard(2)}
+              onMouseLeave={() => setHoveredCard(1)}
+              icon={<AiFillCustomerService />}
+              title="Quality"
+              description="Our team of 150 hand sorters ensure high quality products"
+            />
+            <Card
+              onMouseEnter={() => setHoveredCard(3)}
+              onMouseLeave={() => setHoveredCard(1)}
+              icon={<GoLaw />}
+              title="Mix"
+              description="Increase ESG Scores with 80% Virgin & 20% Recycled Products"
+            />
+          </div>
+        </div>
+        <div className="sliding-bar-container col-start-7 col-end-13">
+          <div
+            className="sliding-bar pt-2"
+            style={{
+              transform: `translateX(${calculateTranslateX(hoveredCard)}%)`,
+            }}
+          ></div>
         </div>
       </div>
 
@@ -296,7 +345,8 @@ export default function Home() {
             <div id="container__right">{renderItemContent()}</div>
           </div>
         </div>
-        {/* Middle Support  */}
+
+        {/* Support  */}
         <div className="w-full">
           <div className="flex flex-col md:flex-row">
             <div className="bg-green-500 text-white pt-12 pb-24 px-4">
@@ -313,56 +363,6 @@ export default function Home() {
               src="https://kmsibir.ru/upload/iblock/572/lyz6j3z00d7d8jomqhpu4s452m9t1sah.jpg"
               alt=""
             />
-          </div>
-        </div>
-
-        {/* About & Services */}
-        <div className="grid grid-cols-12 grid-rows-1">
-          <div className="col-start-1 col-end-7 row-start-0">
-            {/* Conditional Images will go HERE!! */}
-            {hoveredImage && (
-              <div className="h-[100%] overflow-clip">
-                {/* Adjust height as needed */}
-                <img
-                  src={hoveredImage.img}
-                  alt={`Service ${hoveredCard}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-          </div>
-          <div className="col-start-7 col-end-13 justify-center">
-            <div className="flex gap-2 hover:cursor-pointer mt-10 mx-2">
-              <Card
-                onMouseEnter={() => setHoveredCard(1)}
-                onMouseLeave={() => setHoveredCard(1)}
-                icon={<FaRecycle />}
-                title="Recycling"
-                description="Together we reduce carbon footprints by collecting your recycable materials"
-              />
-              <Card
-                onMouseEnter={() => setHoveredCard(2)}
-                onMouseLeave={() => setHoveredCard(1)}
-                icon={<AiFillCustomerService />}
-                title="Quality"
-                description="Our team of 150 hand sorters ensure high quality products"
-              />
-              <Card
-                onMouseEnter={() => setHoveredCard(3)}
-                onMouseLeave={() => setHoveredCard(1)}
-                icon={<GoLaw />}
-                title="Mix"
-                description="Increase ESG Scores with 80% Virgin & 20% Recycled Products"
-              />
-            </div>
-          </div>
-          <div className="sliding-bar-container col-start-7 col-end-13">
-            <div
-              className="sliding-bar pt-2"
-              style={{
-                transform: `translateX(${calculateTranslateX(hoveredCard)}%)`,
-              }}
-            ></div>
           </div>
         </div>
         {/* Products Carousels */}
