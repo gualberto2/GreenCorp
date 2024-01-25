@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { IoMdArrowDropright } from "react-icons/io";
 import { FaArrowRightToBracket } from "react-icons/fa6";
@@ -9,16 +9,27 @@ import ProductSlider from "../components/ProductSlider";
 // import AboutImages from "../components/AboutImages";
 
 // Icon imports:
+
 import { AiFillCustomerService } from "react-icons/ai";
+import { GiWorld } from "react-icons/gi";
+import { GrUserWorker } from "react-icons/gr";
 import { GoLaw } from "react-icons/go";
-import { FaRecycle } from "react-icons/fa";
+import { FaRecycle, FaPeopleArrows } from "react-icons/fa";
 
 export default function Home() {
   // Below is state for the about us / services card section
   const [activeItem, setActiveItem] = useState("Roving Fabric");
-
+  const [showTitle, setShowTitle] = useState(true);
   const [hoveredCard, setHoveredCard] = useState(1);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowTitle(window.scrollY <= 1); // The title shows when scroll position is at or below 50px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const products = [
     // HDPE Below
     {
@@ -186,10 +197,17 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className="">
       {/* Hero Section */}
       <div className=" flex items-center justify-center">
-        <div className="hero-bg h-screen flex flex-col md:grid md:grid-cols-8 lg:grid-cols-12  grid-rows-6   p-8 text-white ">
+        <div className="hero-bg h-screen flex flex-col md:grid md:grid-cols-8 lg:grid-cols-12  grid-rows-6  pt-20  text-white ">
+          <h1
+            className={`font-display text-2xl text-center text-nowrap transition-opacity duration-500 mb-8 md:mb-0 ${
+              showTitle ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            KnJ GREEN PACK CORP.
+          </h1>
           <div className="col-start-5 col-end-12 row-start-2 row-end-5 mb-4 md:mb-0">
             <h2 className="text-5xl tracking-tighter mb-1 md:mb-0 px-2 md:px-4 md:mt-8 font-bold">
               Making a Difference with Recycling
@@ -200,25 +218,101 @@ export default function Home() {
               environmental footprint
             </p>
           </div>
-          <div className="border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-2 row-end-3 flex flex-col items-center justify-center p-6 relative  shadow-xl">
-            <span className="absolute -right-5 -top-9  font-thin text-6xl">
-              +
-            </span>
-            <p className="font-normal text-4xl">350+</p>
-            <p className="pt-6 font-light text-lg">Employees at warehouse</p>
+        </div>
+      </div>
+
+      {/* About */}
+      <div>
+        <div className="flex flex-col">
+          <div>
+            <h2 className="text-5xl tracking-tight font-semibold text-center my-6">
+              Spotlight
+            </h2>
           </div>
-          <div className=" border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-3 row-end-4  flex flex-col items-center justify-center p-6 relative  shadow-xl">
-            <span className="absolute -left-5 -top-8  font-thin text-6xl">
-              +
-            </span>
-            <p className="font-medium text-4xl ">200 Tons</p>
-            <p className="pt-6 font-light text-lg">Recycled plastic per year</p>
+          <div>{/* Border splitter here */}</div>
+          <div className="flex flex-col md:flex-row items-start justify-between w-full md:gap-10 mx-auto max-w-xl">
+            <div className="flex flex-col justify-center text-center ">
+              <div className=" bg-green-300 w-fit mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
+                <FaRecycle className="" />
+              </div>
+              <h3 className="text-2xl font-semibold tracking-tighter">
+                Recycling
+              </h3>
+              <p className="tracking-wide font-light">
+                We pride ourselves in the hassle-free and cost effective
+                recycling process for associates
+              </p>
+              <p className="tracking-wider font-normal hover:text-gray-500">
+                Learn more {">"}
+                {">"}
+              </p>
+            </div>
+            <div className="flex flex-col justify-center text-center ">
+              <div className=" bg-green-300 w-fit mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
+                <FaPeopleArrows />
+              </div>
+              <h3 className="text-2xl font-semibold tracking-tighter">B2B</h3>
+              <p className="tracking-wide font-light">
+                Business to Business transactions are our specialty
+              </p>
+              <p className="tracking-wider font-normal hover:text-gray-500">
+                Learn more {">"}
+                {">"}
+              </p>
+            </div>
+            <div className="flex flex-col justify-center text-center ">
+              <div className=" bg-green-300 w-fit mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
+                <GiWorld />
+              </div>
+              <h3 className="text-2xl font-semibold tracking-tighter">
+                Shipping
+              </h3>
+              <p className="tracking-wide font-light">
+                No matter what continent you require material, we will get it
+                shipped to you.
+              </p>
+              <p className="tracking-wider font-normal hover:text-gray-500">
+                Learn more {">"}
+                {">"}
+              </p>
+            </div>
+            <div className="flex flex-col justify-center text-center ">
+              <div className=" bg-green-300 w-fit mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
+                <GrUserWorker />
+              </div>
+              <h3 className="text-2xl font-semibold tracking-tighter">
+                Environment
+              </h3>
+              <p className="tracking-wide font-light">
+                Processing of materials is done by hand, by real people.
+                Ensuring high-grade quality.
+              </p>
+              <p className="tracking-wider font-normal hover:text-gray-500">
+                Learn more {">"}
+                {">"}
+              </p>
+            </div>
           </div>
-          <div className=" border md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-4 row-start-4 row-end-5  flex flex-col items-center justify-center p-6 relative  shadow-xl">
-            <span className="absolute -right-5   font-thin text-6xl">+</span>
-            <p className="font-medium text-4xl ">13+</p>
-            <p className="pt-6 font-light text-lg">Types of recyclables</p>
+        </div>
+      </div>
+
+      {/* Middle Support  */}
+      <div className="w-full">
+        <div className="flex flex-col md:flex-row">
+          <div className="bg-violet-500 text-white pt-12 pb-24 px-4">
+            <h2 className="text-3xl font-bold tracking-tight mb-1">
+              45,000 Pounds
+            </h2>
+            <p className="text-lg font-light tracking-wide">
+              Of monthly storage volume of roving fabric in warehouse
+            </p>
           </div>
+
+          <img
+            className="object-cover w-full h-[300px]"
+            src="https://kmsibir.ru/upload/iblock/572/lyz6j3z00d7d8jomqhpu4s452m9t1sah.jpg"
+            alt=""
+          />
         </div>
       </div>
 
@@ -261,33 +355,12 @@ export default function Home() {
             <div id="container__right">{renderItemContent()}</div>
           </div>
         </div>
-        {/* Middle Support  */}
-        <div className="w-full">
-          <div className="flex flex-col md:flex-row">
-            <div className="bg-violet-500 text-white pt-12 pb-24 px-4">
-              <h2 className="text-3xl font-bold tracking-tight mb-1">
-                45,000 Pounds
-              </h2>
-              <p className="text-lg font-light tracking-wide">
-                Of monthly storage volume of roving fabric in warehouse
-              </p>
-            </div>
-
-            <img
-              className="object-cover w-full h-[300px]"
-              src="https://kmsibir.ru/upload/iblock/572/lyz6j3z00d7d8jomqhpu4s452m9t1sah.jpg"
-              alt=""
-            />
-          </div>
-        </div>
 
         {/* About & Services */}
-        <div className="grid grid-cols-12 grid-rows-1">
+        {/* <div className="grid grid-cols-12 grid-rows-1">
           <div className="col-start-1 col-end-7 row-start-0">
-            {/* Conditional Images will go HERE!! */}
             {hoveredImage && (
               <div className="h-[100%] overflow-clip">
-                {/* Adjust height as needed */}
                 <img
                   src={hoveredImage.img}
                   alt={`Service ${hoveredCard}`}
@@ -329,15 +402,7 @@ export default function Home() {
               }}
             ></div>
           </div>
-        </div>
-        {/* Products */}
-        <div className="text-center bg-slate-950 p-[10rem] text-amber-100">
-          <div>
-            <h1 className="text-4xl font-bold">Products</h1>
-          </div>
-          {/* Products cards below */}
-          <ProductSlider products={products} />
-        </div>
+        </div> */}
       </div>
     </div>
   );
