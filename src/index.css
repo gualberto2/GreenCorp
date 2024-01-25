@@ -72,6 +72,26 @@ body {
   background-size: cover; /* Makes the image scale to cover the element */
   background-position: center; /* Centers the background image */
 }
+/* Hero arrow */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(
+      -20px
+    ); /* Adjust the value for more or less movement */
+  }
+}
+
+.arrow-bounce {
+  position: absolute;
+  bottom: 10px; /* Adjust based on your layout */
+
+  transform: translateX(-50%); /* Center the arrow horizontally */
+  animation: bounce 2s infinite; /* Use the bounce animation, play it forever */
+}
 
 /* Products home page styling */
 

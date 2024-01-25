@@ -11,10 +11,15 @@ import ProductSlider from "../components/ProductSlider";
 // Icon imports:
 
 import { AiFillCustomerService } from "react-icons/ai";
-import { GiWorld } from "react-icons/gi";
+import { GiWorld, GiCheckboxTree } from "react-icons/gi";
 import { GrUserWorker } from "react-icons/gr";
 import { GoLaw } from "react-icons/go";
-import { FaRecycle, FaPeopleArrows } from "react-icons/fa";
+import {
+  FaRecycle,
+  FaPeopleArrows,
+  FaArrowAltCircleDown,
+} from "react-icons/fa";
+import { MdConnectWithoutContact } from "react-icons/md";
 
 export default function Home() {
   // Below is state for the about us / services card section
@@ -199,40 +204,57 @@ export default function Home() {
   return (
     <div className="">
       {/* Hero Section */}
-      <div className=" flex items-center justify-center">
-        <div className="hero-bg h-screen flex flex-col md:grid md:grid-cols-8 lg:grid-cols-12  grid-rows-6  pt-20  text-white ">
-          <h1
-            className={`font-display text-2xl text-center text-nowrap transition-opacity duration-500 mb-8 md:mb-0 ${
-              showTitle ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            KnJ GREEN PACK CORP.
-          </h1>
-          <div className="col-start-5 col-end-12 row-start-2 row-end-5 mb-4 md:mb-0">
-            <h2 className="text-5xl tracking-tighter mb-1 md:mb-0 px-2 md:px-4 md:mt-8 font-bold">
-              Making a Difference with Recycling
-            </h2>
-            <p className="text-lg px-3 tracking-wide">
-              Southern California's premier PCR Recycling factory and
-              manufacturer, we ensure high quality while reducing your
-              environmental footprint
-            </p>
+      <div className=" flex items-center justify-center relative">
+        <div className="hero-bg h-screen  w-full">
+          <div className=" flex items-center flex-col md:pt-36 pt-20 max-w-3xl mx-auto text-white ">
+            <h1
+              className={`font-display md:text-6xl text-3xl text-center sm:text-nowrap transition-opacity duration-500 mb-8 md:mb-0 ${
+                showTitle ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              KnJ GREEN PACK CORP.
+            </h1>
+            <div className="flex flex-col items-start justify-center mb-4 md:pt-10 md:mb-8">
+              <h2 className="text-5xl tracking-tighter mb-1 md:mb-0 px-2 md:px-4 md:mt-8 font-bold">
+                Making a Difference with Recycling
+              </h2>
+              <p className="text-lg px-3 tracking-wide">
+                Southern California's premier PCR Recycling factory and
+                manufacturer, we ensure high quality while reducing your
+                environmental footprint
+              </p>
+            </div>
+            <div>
+              {/* contact stuff */}
+              <div className="flex flex-col items-center mt-8">
+                <h2 className="text-3xl font-semibold tracking-tighter mb-1">
+                  Get a hold of us.
+                </h2>
+
+                <p className="font-thin text-4xl  tracking-wider">
+                  <MdConnectWithoutContact />
+                </p>
+              </div>
+            </div>
+            <div className="arrow-bounce text-center text-6xl">
+              <FaArrowAltCircleDown color="white" />
+            </div>
           </div>
         </div>
       </div>
 
       {/* About */}
       <div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-12">
           <div>
             <h2 className="text-5xl tracking-tight font-semibold text-center my-6">
               Spotlight
             </h2>
           </div>
           <div>{/* Border splitter here */}</div>
-          <div className="flex flex-col md:flex-row items-start justify-between w-full md:gap-10 mx-auto max-w-xl">
-            <div className="flex flex-col justify-center text-center ">
-              <div className=" bg-green-300 w-fit mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
+          <div className="flex flex-col md:flex-row items-start gap-6 line-clamp-3 justify-center w-full md:gap-10 px-2 md:px-4 mx-auto  max-w-5xl">
+            <div className="flex flex-col justify-center w-full text-center ">
+              <div className=" bg-green-300 mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
                 <FaRecycle className="" />
               </div>
               <h3 className="text-2xl font-semibold tracking-tighter">
@@ -247,8 +269,8 @@ export default function Home() {
                 {">"}
               </p>
             </div>
-            <div className="flex flex-col justify-center text-center ">
-              <div className=" bg-green-300 w-fit mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
+            <div className="flex flex-col   w-full justify-center text-center ">
+              <div className=" bg-green-300  mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
                 <FaPeopleArrows />
               </div>
               <h3 className="text-2xl font-semibold tracking-tighter">B2B</h3>
@@ -260,8 +282,8 @@ export default function Home() {
                 {">"}
               </p>
             </div>
-            <div className="flex flex-col justify-center text-center ">
-              <div className=" bg-green-300 w-fit mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
+            <div className="flex flex-col  w-full justify-center text-center ">
+              <div className=" bg-green-300  mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
                 <GiWorld />
               </div>
               <h3 className="text-2xl font-semibold tracking-tighter">
@@ -276,8 +298,8 @@ export default function Home() {
                 {">"}
               </p>
             </div>
-            <div className="flex flex-col justify-center text-center ">
-              <div className=" bg-green-300 w-fit mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
+            <div className="flex flex-col  w-full justify-center text-center ">
+              <div className=" bg-green-300  mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
                 <GrUserWorker />
               </div>
               <h3 className="text-2xl font-semibold tracking-tighter">
@@ -286,6 +308,22 @@ export default function Home() {
               <p className="tracking-wide font-light">
                 Processing of materials is done by hand, by real people.
                 Ensuring high-grade quality.
+              </p>
+              <p className="tracking-wider font-normal hover:text-gray-500">
+                Learn more {">"}
+                {">"}
+              </p>
+            </div>
+            <div className="flex flex-col  w-full justify-center text-center ">
+              <div className=" bg-green-300  mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
+                <GiCheckboxTree />
+              </div>
+              <h3 className="text-2xl font-semibold tracking-tighter">
+                Distribution
+              </h3>
+              <p className="tracking-wide font-light">
+                Tackling distribution, ensuring quality and proper delivery, we
+                make handling product a stress-free operation.
               </p>
               <p className="tracking-wider font-normal hover:text-gray-500">
                 Learn more {">"}
