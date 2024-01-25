@@ -92,11 +92,12 @@ export default function Home() {
 
   const renderItemContent = () => {
     switch (activeItem) {
-      case "Roving Fabric":
+      /* HDPE Listings */
+      case "HDPE":
         return (
           <div className="flex flex-col md:flex-row justify-start">
             <div className="flex flex-row justify-center gap-2 items-center">
-              <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+              <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                 <FaArrowRightToBracket />
               </div>
               <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -104,18 +105,18 @@ export default function Home() {
               </p>
             </div>
             <img
-              className="max-w-full h-auto"
-              src="https://kmsibir.ru/upload/iblock/a85/a85a874075cd91c71c1677d06466be53.jpg"
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
             />
           </div>
         );
-
-      case "Fiberglass Products":
+      /* LDPE Product Listings */
+      case "LDPE":
         return (
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col gap-8">
               <div className="flex flex-row justify-center gap-2 items-center">
-                <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                   <FaArrowRightToBracket />
                 </div>
                 <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -123,7 +124,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-row justify-center gap-2 items-center">
-                <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                   <FaArrowRightToBracket />
                 </div>
                 <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -131,7 +132,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-row  justify-center gap-2 items-center">
-                <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                   <FaArrowRightToBracket />
                 </div>
                 <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -140,18 +141,19 @@ export default function Home() {
               </div>
             </div>
             <img
-              className="max-w-full h-auto"
-              src="https://kmsibir.ru/upload/iblock/49f/ghajzvo7zhr9mgajdqouamu7fgqq4k0j.png"
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
             />
           </div>
         );
-      case "Composite Gratings":
+      /* LLDPE Product Listings */
+      case "LLDPE":
         return (
           <div className="flex flex-col md:flex-row">
             <div className="text-2xl pt-8 font-medium tracking-wide lowercase flex flex-col">
               <div className="flex flex-col gap-8">
                 <div className="flex flex-row justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -159,7 +161,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-row justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -167,7 +169,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-row  justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -175,7 +177,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-row  justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -183,7 +185,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-row  justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -193,8 +195,45 @@ export default function Home() {
               </div>
             </div>
             <img
-              className="max-w-full h-auto"
-              src="https://kmsibir.ru/upload/iblock/033/03332876d2300a8bc67e8b14a9b1f754.jpg"
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
+            />
+          </div>
+        );
+      /* PP Product Listings */
+      case "PP":
+        return (
+          <div className="flex flex-col md:flex-row justify-start">
+            <div className="flex flex-row justify-center gap-2 items-center">
+              <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
+                <FaArrowRightToBracket />
+              </div>
+              <p className="text-2xl  font-medium tracking-wide lowercase">
+                ISO PFR
+              </p>
+            </div>
+            <img
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
+            />
+          </div>
+        );
+
+      /* PS Product Listings */
+      case "PS":
+        return (
+          <div className="flex flex-col md:flex-row justify-start">
+            <div className="flex flex-row justify-center gap-2 items-center">
+              <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
+                <FaArrowRightToBracket />
+              </div>
+              <p className="text-2xl  font-medium tracking-wide lowercase">
+                ISO PFR
+              </p>
+            </div>
+            <img
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
             />
           </div>
         );
@@ -204,6 +243,7 @@ export default function Home() {
   return (
     <div className="">
       {/* Hero Section */}
+
       <div className=" flex items-center justify-center relative">
         <div className="hero-bg h-screen  w-full">
           <div className=" flex items-center flex-col md:pt-36 pt-20 max-w-3xl mx-auto text-white ">
@@ -344,6 +384,7 @@ export default function Home() {
             <p className="text-lg font-light tracking-wide">
               Of monthly storage volume of roving fabric in warehouse
             </p>
+
           </div>
 
           <img
@@ -351,6 +392,55 @@ export default function Home() {
             src="https://kmsibir.ru/upload/iblock/572/lyz6j3z00d7d8jomqhpu4s452m9t1sah.jpg"
             alt=""
           />
+        </div>
+      </div>
+      {/* About & Services */}
+      <div className="grid grid-cols-12 grid-rows-1 pb-28">
+        <div className="col-start-1 col-end-7 row-start-0">
+          {/* Conditional Images will go HERE!! */}
+          {hoveredImage && (
+            <div className="h-[100%] overflow-clip">
+              {/* Adjust height as needed */}
+              <img
+                src={hoveredImage.img}
+                alt={`Service ${hoveredCard}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
+        </div>
+        <div className="col-start-7 col-end-13 justify-center">
+          <div className="flex gap-2 hover:cursor-pointer mt-10 mx-2">
+            <Card
+              onMouseEnter={() => setHoveredCard(1)}
+              onMouseLeave={() => setHoveredCard(1)}
+              icon={<FaRecycle />}
+              title="Recycling"
+              description="Together we reduce carbon footprints by collecting your recycable materials"
+            />
+            <Card
+              onMouseEnter={() => setHoveredCard(2)}
+              onMouseLeave={() => setHoveredCard(1)}
+              icon={<AiFillCustomerService />}
+              title="Quality"
+              description="Our team of 150 hand sorters ensure high quality products"
+            />
+            <Card
+              onMouseEnter={() => setHoveredCard(3)}
+              onMouseLeave={() => setHoveredCard(1)}
+              icon={<GoLaw />}
+              title="Mix"
+              description="Increase ESG Scores with 80% Virgin & 20% Recycled Products"
+            />
+          </div>
+        </div>
+        <div className="sliding-bar-container col-start-7 col-end-13">
+          <div
+            className="sliding-bar pt-2"
+            style={{
+              transform: `translateX(${calculateTranslateX(hoveredCard)}%)`,
+            }}
+          ></div>
         </div>
       </div>
 
@@ -365,11 +455,7 @@ export default function Home() {
               id="container__left"
               className="flex flex-col space-y-8 md:w-fit justify-start px-4 md:px-0 mb-8"
             >
-              {[
-                "Roving Fabric",
-                "Fiberglass Products",
-                "Composite Gratings",
-              ].map((item) => (
+              {["HDPE", "LDPE", "LLDPE", "PP", "PS"].map((item) => (
                 <div
                   key={item}
                   onClick={() => setActiveItem(item)}
@@ -381,7 +467,7 @@ export default function Home() {
                     <IoMdArrowDropright className="mr-2 arrow-spin" />
                   )}
                   <h3
-                    className={`text-5xl tracking-tighter font-semibold hover:underline decoration-purple-500 overflow-hidden decoration-4 ${
+                    className={`text-5xl tracking-tighter font-semibold hover:underline decoration-green-500 overflow-hidden decoration-4 ${
                       activeItem === item ? "" : "hover:text-animation"
                     }`}
                   >
@@ -394,52 +480,33 @@ export default function Home() {
           </div>
         </div>
 
-        {/* About & Services */}
-        {/* <div className="grid grid-cols-12 grid-rows-1">
-          <div className="col-start-1 col-end-7 row-start-0">
-            {hoveredImage && (
-              <div className="h-[100%] overflow-clip">
-                <img
-                  src={hoveredImage.img}
-                  alt={`Service ${hoveredCard}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-          </div>
-          <div className="col-start-7 col-end-13 justify-center">
-            <div className="flex gap-2 hover:cursor-pointer mt-10 mx-2">
-              <Card
-                onMouseEnter={() => setHoveredCard(1)}
-                onMouseLeave={() => setHoveredCard(1)}
-                icon={<FaRecycle />}
-                title="Recycling"
-                description="Together we reduce carbon footprints by collecting your recycable materials"
-              />
-              <Card
-                onMouseEnter={() => setHoveredCard(2)}
-                onMouseLeave={() => setHoveredCard(1)}
-                icon={<AiFillCustomerService />}
-                title="Quality"
-                description="Our team of 150 hand sorters ensure high quality products"
-              />
-              <Card
-                onMouseEnter={() => setHoveredCard(3)}
-                onMouseLeave={() => setHoveredCard(1)}
-                icon={<GoLaw />}
-                title="Mix"
-                description="Increase ESG Scores with 80% Virgin & 20% Recycled Products"
-              />
+
+        {/* Support  */}
+        <div className="w-full">
+          <div className="flex flex-col md:flex-row">
+            <div className="bg-green-500 text-white pt-12 pb-24 px-4">
+              <h2 className="text-3xl font-bold tracking-tight mb-1">
+                45,000 Pounds
+              </h2>
+              <p className="text-lg font-light tracking-wide">
+                Of monthly storage volume of roving fabric in warehouse
+              </p>
             </div>
+
+            <img
+              className="object-cover w-full h-[300px]"
+              src="https://kmsibir.ru/upload/iblock/572/lyz6j3z00d7d8jomqhpu4s452m9t1sah.jpg"
+              alt=""
+            />
           </div>
-          <div className="sliding-bar-container col-start-7 col-end-13">
-            <div
-              className="sliding-bar pt-2"
-              style={{
-                transform: `translateX(${calculateTranslateX(hoveredCard)}%)`,
-              }}
-            ></div>
+        </div>
+        {/* Products Carousels */}
+        {/* <div className="text-center bg-slate-950 p-[10rem] text-amber-100">
+          <div>
+            <h1 className="text-4xl font-bold">Products</h1>
           </div>
+          <ProductSlider products={products} />
+
         </div> */}
       </div>
     </div>

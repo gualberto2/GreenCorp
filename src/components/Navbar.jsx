@@ -26,6 +26,7 @@ export default function Navbar() {
           isScrolled ? "scrolled" : ""
         }`}
       >
+
         <div>
           <h1 className="font-display text-2xl text-center text-white">
             KnJ GREEN PACK CORP.
@@ -37,6 +38,7 @@ export default function Navbar() {
           <p>About</p>
           <p>Contact</p>
         </div>
+
       </div>
     </nav>
   );

@@ -21,7 +21,7 @@ export default function ProductSlider({ products = [] }) {
     //
     <Slider {...settings}>
       {products.map((product, index) => (
-        <div key={index} className="card-slide">
+        <div key={index} className="max-w-full h-auto">
           <ProductCards
             img={product.img}
             title={product.title}
