@@ -10,44 +10,56 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Selection / Highlighting stuff */
 */ ::-moz-selection {
   /* Code for Firefox */
   color: white;
-  background: #6366f1;
+  background: #baf2bb;
 }
 
 ::selection {
   color: white;
-  background: #6366f1;
+  background: #baf2bb;
 }
 
+/* Navbar */
+
 #navbar {
-  font-weight: bold;
-
-  top: 0;
-
-  height: 24px; /* Full viewport height by default */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.7
-  ); /* Or any other color you prefer */
-  transition: height 0.3s, background-color 0.3s; /* Smooth transition for height and background-color */
-  z-index: 500;
+  position: fixed;
+  top: -100%; /* Start off-screen */
+  transition: top 0.7s ease, background-color 1s ease, color 0.9s ease;
+  z-index: 1000;
 }
 
 #navbar.scrolled {
-  height: 40px; /* Reduced height when scrolled */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.7
-  ); /* Or any other color you prefer */
+  top: 0; /* Slide in */
+  background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
+  color: black; /* Change text color */
 }
 
+#navbar.scrolled p {
+  color: black;
+}
+
+#navbar.scrolled h1 {
+  color: #228b22;
+}
+
+/* Hero Section title animation */
+.fade-up {
+  animation: fadeUpAndDisappear 0.5s ease forwards;
+}
+
+@keyframes fadeUpAndDisappear {
+  to {
+    opacity: 0;
+    transform: translateY(-px); /* Adjust the value as needed */
+  }
+}
+
+/* Hero background image styling */
 .hero-bg {
   background-image: linear-gradient(
       to bottom,
