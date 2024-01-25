@@ -94,7 +94,8 @@ export default function Home() {
 
   const renderItemContent = () => {
     switch (activeItem) {
-      case "Roving Fabric":
+      /* HDPE Listings */
+      case "HDPE":
         return (
           <div className="flex flex-col md:flex-row justify-start">
             <div className="flex flex-row justify-center gap-2 items-center">
@@ -106,13 +107,13 @@ export default function Home() {
               </p>
             </div>
             <img
-              className="max-w-full h-auto"
-              src="https://kmsibir.ru/upload/iblock/a85/a85a874075cd91c71c1677d06466be53.jpg"
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
             />
           </div>
         );
-
-      case "Fiberglass Products":
+      /* LDPE Product Listings */
+      case "LDPE":
         return (
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col gap-8">
@@ -142,12 +143,13 @@ export default function Home() {
               </div>
             </div>
             <img
-              className="max-w-full h-auto"
-              src="https://kmsibir.ru/upload/iblock/49f/ghajzvo7zhr9mgajdqouamu7fgqq4k0j.png"
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
             />
           </div>
         );
-      case "Composite Gratings":
+      /* LLDPE Product Listings */
+      case "LLDPE":
         return (
           <div className="flex flex-col md:flex-row">
             <div className="text-2xl pt-8 font-medium tracking-wide lowercase flex flex-col">
@@ -195,8 +197,45 @@ export default function Home() {
               </div>
             </div>
             <img
-              className="max-w-full h-auto"
-              src="https://kmsibir.ru/upload/iblock/033/03332876d2300a8bc67e8b14a9b1f754.jpg"
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
+            />
+          </div>
+        );
+      /* PP Product Listings */
+      case "PP":
+        return (
+          <div className="flex flex-col md:flex-row justify-start">
+            <div className="flex flex-row justify-center gap-2 items-center">
+              <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
+                <FaArrowRightToBracket />
+              </div>
+              <p className="text-2xl  font-medium tracking-wide lowercase">
+                ISO PFR
+              </p>
+            </div>
+            <img
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
+            />
+          </div>
+        );
+
+      /* PS Product Listings */
+      case "PS":
+        return (
+          <div className="flex flex-col md:flex-row justify-start">
+            <div className="flex flex-row justify-center gap-2 items-center">
+              <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
+                <FaArrowRightToBracket />
+              </div>
+              <p className="text-2xl  font-medium tracking-wide lowercase">
+                ISO PFR
+              </p>
+            </div>
+            <img
+              className="max-w-full h-64"
+              src="src/assets/placeholderItem.png"
             />
           </div>
         );
@@ -206,6 +245,7 @@ export default function Home() {
   return (
     <div className="">
       {/* Hero Section */}
+
       <div className=" flex items-center justify-center relative">
         <div className="hero-bg h-screen  w-full">
           <div className="max-w-xl mx-auto pt-8">
