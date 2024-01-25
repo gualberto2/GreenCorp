@@ -20,6 +20,8 @@ import {
   FaArrowAltCircleDown,
 } from "react-icons/fa";
 import { MdConnectWithoutContact } from "react-icons/md";
+import { IoMdArrowDroprightCircle } from "react-icons/io";
+import { TiWorld } from "react-icons/ti";
 
 export default function Home() {
   // Below is state for the about us / services card section
@@ -96,7 +98,7 @@ export default function Home() {
         return (
           <div className="flex flex-col md:flex-row justify-start">
             <div className="flex flex-row justify-center gap-2 items-center">
-              <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+              <div className="text-2xl text-white bg-[#59c9a5] rounded-full p-2 pr-3">
                 <FaArrowRightToBracket />
               </div>
               <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -115,7 +117,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col gap-8">
               <div className="flex flex-row justify-center gap-2 items-center">
-                <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                <div className="text-2xl text-white bg-[#59c9a5]  rounded-full p-2 pr-3">
                   <FaArrowRightToBracket />
                 </div>
                 <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -123,7 +125,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-row justify-center gap-2 items-center">
-                <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                <div className="text-2xl text-white bg-[#59c9a5]  rounded-full p-2 pr-3">
                   <FaArrowRightToBracket />
                 </div>
                 <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -131,7 +133,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-row  justify-center gap-2 items-center">
-                <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                <div className="text-2xl text-white bg-[#59c9a5]  rounded-full p-2 pr-3">
                   <FaArrowRightToBracket />
                 </div>
                 <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -151,7 +153,7 @@ export default function Home() {
             <div className="text-2xl pt-8 font-medium tracking-wide lowercase flex flex-col">
               <div className="flex flex-col gap-8">
                 <div className="flex flex-row justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-[#59c9a5]  rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -159,7 +161,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-row justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-[#59c9a5]  rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -167,7 +169,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-row  justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-[#59c9a5]  rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -175,7 +177,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-row  justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-[#59c9a5]  rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -183,7 +185,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-row  justify-center gap-2 items-center">
-                  <div className="text-2xl text-white bg-purple-500 rounded-full p-2 pr-3">
+                  <div className="text-2xl text-white bg-[#59c9a5]  rounded-full p-2 pr-3">
                     <FaArrowRightToBracket />
                   </div>
                   <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -206,7 +208,27 @@ export default function Home() {
       {/* Hero Section */}
       <div className=" flex items-center justify-center relative">
         <div className="hero-bg h-screen  w-full">
-          <div className=" flex items-center flex-col md:pt-36 pt-20 max-w-3xl mx-auto text-white ">
+          <div className="max-w-xl mx-auto pt-8">
+            {/* <div>
+              <IoMdArrowDroprightCircle />
+            </div> */}
+            <div
+              className={`text-white/50 text-center flex flex-row justify-around text-xl font-semibold tracking-wider  items-center transition-opacity duration-500    ${
+                showTitle ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <p className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out ">
+                About
+              </p>
+              <p className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out ">
+                Products
+              </p>
+              <p className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out ">
+                Contact
+              </p>
+            </div>
+          </div>
+          <div className=" flex items-center flex-col md:pt-36 pt-32 max-w-3xl mx-auto text-white ">
             <h1
               className={`font-display md:text-6xl text-3xl text-center sm:text-nowrap transition-opacity duration-500 mb-8 md:mb-0 ${
                 showTitle ? "opacity-100" : "opacity-0"
@@ -247,11 +269,18 @@ export default function Home() {
       <div>
         <div className="flex flex-col mb-12">
           <div>
-            <h2 className="text-5xl tracking-tight font-semibold text-center my-6">
+            <h2 className="text-5xl tracking-tight font-semibold text-center mt-6 mb-3">
               Spotlight
             </h2>
           </div>
-          <div>{/* Border splitter here */}</div>
+          <div class="flex justify-center items-center mb-3">
+            <div class="border-t border-gray-300 w-16"></div>
+            <span class="px-2 text-gray-400 text-xl">
+              <TiWorld />
+            </span>
+            <div class="border-t border-gray-300 w-16"></div>
+          </div>
+
           <div className="flex flex-col md:flex-row items-start gap-6 line-clamp-3 justify-center w-full md:gap-10 px-2 md:px-4 mx-auto  max-w-5xl">
             <div className="flex flex-col justify-center w-full text-center ">
               <div className=" bg-green-300 mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
@@ -337,7 +366,7 @@ export default function Home() {
       {/* Middle Support  */}
       <div className="w-full">
         <div className="flex flex-col md:flex-row">
-          <div className="bg-violet-500 text-white pt-12 pb-24 px-4">
+          <div className="bg-[#59c9a5] text-white pt-12 pb-24 px-4">
             <h2 className="text-3xl font-bold tracking-tight mb-1">
               45,000 Pounds
             </h2>
@@ -381,7 +410,7 @@ export default function Home() {
                     <IoMdArrowDropright className="mr-2 arrow-spin" />
                   )}
                   <h3
-                    className={`text-5xl tracking-tighter font-semibold hover:underline decoration-purple-500 overflow-hidden decoration-4 ${
+                    className={`text-5xl tracking-tighter font-semibold hover:underline decoration-[#baf2bb] overflow-hidden decoration-4 ${
                       activeItem === item ? "" : "hover:text-animation"
                     }`}
                   >

@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav className="flex justify-center ">
       <div
         id="navbar"
-        className={`flex flex-col md:flex-row md:justify-between md:gap-16 rounded-lg px-3 py-2 md:mt-3 transition-all duration-300 ease-in-out ${
+        className={`flex flex-col md:flex-row md:justify-between md:gap-16 rounded-lg px-3 py-2 mt-3  transition-all duration-300 ease-in-out ${
           isScrolled ? "scrolled" : ""
         }`}
       >
@@ -31,8 +31,8 @@ export default function Navbar() {
             KnJ GREEN PACK CORP.
           </h1>
         </div>
-        <div className="flex flex-row justify-between md:gap-6 items-center text-white font-light  text-lg tracking-tighter">
-          <p>Home</p>
+        <div className=" flex-row justify-between hidden md:flex md:gap-6 items-center text-white font-light  text-lg tracking-tighter">
+          <p onClick={() => navigate("/")}>Home</p>
           <p>Products</p>
           <p>About</p>
           <p>Contact</p>

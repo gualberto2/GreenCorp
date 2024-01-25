@@ -34,7 +34,7 @@ body {
 
 #navbar.scrolled {
   top: 0; /* Slide in */
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
   color: black; /* Change text color */
 }
@@ -44,7 +44,7 @@ body {
 }
 
 #navbar.scrolled h1 {
-  color: #228b22;
+  color: #56e39f;
 }
 
 /* Hero Section title animation */
@@ -87,11 +87,13 @@ body {
 
 .arrow-bounce {
   position: absolute;
-  bottom: 10px; /* Adjust based on your layout */
+  bottom: 50px; /* Adjust based on your layout */
 
   transform: translateX(-50%); /* Center the arrow horizontally */
   animation: bounce 2s infinite; /* Use the bounce animation, play it forever */
 }
+
+/*  Support section divider*/
 
 /* Products home page styling */
 
