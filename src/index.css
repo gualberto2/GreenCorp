@@ -198,6 +198,7 @@ body {
   transition: transform 0.3s ease-in-out; /* Smooth sliding effect */
 }
 
+
 .huge-icon {
   font-size: 9rem; /* 128px */
   line-height: 1;
@@ -209,4 +210,5 @@ body {
 .small-big-icon {
   font-size: 8.2rem; /* 128px */
   line-height: 1;
+
 }

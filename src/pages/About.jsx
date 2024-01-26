@@ -18,10 +18,12 @@ export default function About() {
   }, [boxes]);
 
   return (
-    <div id="animationWrapper">
-      {boxes.map((box) => (
-        <div key={box} className="box" id={`box${box}`}></div>
-      ))}
-    </div>
+    <></>
+    // <div id="animationWrapper">
+    //   {boxes.map((box) => (
+    //     <div key={box} className="box" id={`box${box}`}></div>
+    //   ))}
+    // </div>
+    // Above is the green box animations
   );
 }
