@@ -10,44 +10,56 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Selection / Highlighting stuff */
 */ ::-moz-selection {
   /* Code for Firefox */
   color: white;
-  background: #6366f1;
+  background: #baf2bb;
 }
 
 ::selection {
   color: white;
-  background: #6366f1;
+  background: #baf2bb;
 }
 
+/* Navbar */
+
 #navbar {
-  font-weight: bold;
-
-  top: 0;
-
-  height: 24px; /* Full viewport height by default */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.7
-  ); /* Or any other color you prefer */
-  transition: height 0.3s, background-color 0.3s; /* Smooth transition for height and background-color */
-  z-index: 500;
+  position: fixed;
+  top: -100%; /* Start off-screen */
+  transition: top 0.7s ease, background-color 1s ease, color 0.9s ease;
+  z-index: 1000;
 }
 
 #navbar.scrolled {
-  height: 40px; /* Reduced height when scrolled */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.7
-  ); /* Or any other color you prefer */
+  top: 0; /* Slide in */
+  background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
+  color: black; /* Change text color */
 }
 
+#navbar.scrolled p {
+  color: black;
+}
+
+#navbar.scrolled h1 {
+  color: #56e39f;
+}
+
+/* Hero Section title animation */
+.fade-up {
+  animation: fadeUpAndDisappear 0.5s ease forwards;
+}
+
+@keyframes fadeUpAndDisappear {
+  to {
+    opacity: 0;
+    transform: translateY(-px); /* Adjust the value as needed */
+  }
+}
+
+/* Hero background image styling */
 .hero-bg {
   background-image: linear-gradient(
       to bottom,
@@ -60,6 +72,28 @@ body {
   background-size: cover; /* Makes the image scale to cover the element */
   background-position: center; /* Centers the background image */
 }
+/* Hero arrow */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(
+      -20px
+    ); /* Adjust the value for more or less movement */
+  }
+}
+
+.arrow-bounce {
+  position: absolute;
+  bottom: 50px; /* Adjust based on your layout */
+
+  transform: translateX(-50%); /* Center the arrow horizontally */
+  animation: bounce 2s infinite; /* Use the bounce animation, play it forever */
+}
+
+/*  Support section divider*/
 
 /* Products home page styling */
 
@@ -164,9 +198,17 @@ body {
   transition: transform 0.3s ease-in-out; /* Smooth sliding effect */
 }
 
-/* Navigation bar line styling*/
-.left-line {
-}
 
-.right-line {
+.huge-icon {
+  font-size: 9rem; /* 128px */
+  line-height: 1;
+}
+.smaller-big-icon {
+  font-size: 8rem; /* 128px */
+  line-height: 1;
+}
+.small-big-icon {
+  font-size: 8.2rem; /* 128px */
+  line-height: 1;
+
 }
