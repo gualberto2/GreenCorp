@@ -3,9 +3,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="lg:text-left">
+    <footer className="lg:text-left pt-12">
       <div className="lg:flex lg:max-w-6xl lg:mx-auto">
-        <div className="w-full lg:w-auto">
+        <div className="w-full lg:w-auto border-t border-slate-400">
+          <h2 className="text-center text-2xl font-semibold">
+            Let's get in touch
+          </h2>
           <form onSubmit="" className="w-[70%] mx-auto ">
             <div className="flex flex-col">
               {/* Name Input Fields */}
@@ -93,10 +96,12 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex flex-col w-[70%] mx-auto text-center pt-4 lg:w-auto lg:pt-0 lg:flex-row lg:justify-center">
-          <div className="pt-4 border-t border-slate-400 lg:border-none lg:pt-0">
-            <div className="flex justify-between text-lg lg:space-x-4">
-              <p>Home</p>
+        <div className="flex flex-col justify-center w-[70%] mx-auto text-center pt-4 border-t border-slate-400">
+          <div className="">
+            <div className="flex justify-between lg:text-lg lg:pr-4 ">
+              <p className="lg:hover:cursor-pointer lg:hover:underline lg:decoration-green-500 hidden lg:block md:block">
+                Home
+              </p>
               <p className="lg:hover:cursor-pointer lg:hover:underline lg:decoration-green-500">
                 About
               </p>
