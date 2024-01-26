@@ -197,3 +197,16 @@ body {
   background-color: green; /* Your choice of color */
   transition: transform 0.3s ease-in-out; /* Smooth sliding effect */
 }
+
+.huge-icon {
+  font-size: 9rem; /* 128px */
+  line-height: 1;
+}
+.smaller-big-icon {
+  font-size: 8rem; /* 128px */
+  line-height: 1;
+}
+.small-big-icon {
+  font-size: 8.2rem; /* 128px */
+  line-height: 1;
+}

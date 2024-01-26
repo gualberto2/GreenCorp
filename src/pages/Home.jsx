@@ -22,6 +22,12 @@ import {
 import { MdConnectWithoutContact } from "react-icons/md";
 import { IoMdArrowDroprightCircle } from "react-icons/io";
 import { TiWorld } from "react-icons/ti";
+import { IoMdPaperPlane } from "react-icons/io";
+import { LiaFileContractSolid } from "react-icons/lia";
+import { GiMoneyStack } from "react-icons/gi";
+import { CiCalculator1 } from "react-icons/ci";
+import { PiTruckDuotone } from "react-icons/pi";
+import { GrWorkshop } from "react-icons/gr";
 
 export default function Home() {
   // Below is state for the about us / services card section
@@ -294,7 +300,7 @@ export default function Home() {
                 </h2>
 
                 <p className="font-thin text-4xl  tracking-wider">
-                  <MdConnectWithoutContact />
+                  <MdConnectWithoutContact className="hover:underline" />
                 </p>
               </div>
             </div>
@@ -329,7 +335,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold tracking-tighter">
                 Recycling
               </h3>
-              <p className="tracking-wide font-light">
+              <p className="tracking-wide font-light text-gray-500">
                 We pride ourselves in the hassle-free and cost effective
                 recycling process for associates
               </p>
@@ -343,7 +349,7 @@ export default function Home() {
                 <FaPeopleArrows />
               </div>
               <h3 className="text-2xl font-semibold tracking-tighter">B2B</h3>
-              <p className="tracking-wide font-light">
+              <p className="tracking-wide font-light text-gray-500">
                 Business to Business transactions are our specialty
               </p>
               <p className="tracking-wider font-normal hover:text-gray-500">
@@ -358,7 +364,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold tracking-tighter">
                 Shipping
               </h3>
-              <p className="tracking-wide font-light">
+              <p className="tracking-wide font-light text-gray-500">
                 No matter what continent you require material, we will get it
                 shipped to you.
               </p>
@@ -374,7 +380,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold tracking-tighter">
                 Environment
               </h3>
-              <p className="tracking-wide font-light">
+              <p className="tracking-wide font-light text-gray-500">
                 Processing of materials is done by hand, by real people.
                 Ensuring high-grade quality.
               </p>
@@ -390,7 +396,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold tracking-tighter">
                 Distribution
               </h3>
-              <p className="tracking-wide font-light">
+              <p className="tracking-wide font-light text-gray-500">
                 Tackling distribution, ensuring quality and proper delivery, we
                 make handling product a stress-free operation.
               </p>
@@ -405,8 +411,8 @@ export default function Home() {
 
       {/* Middle Support  */}
       <div className="w-full">
-        <div className="flex flex-col md:flex-row">
-          <div className="bg-[#59c9a5] text-white pt-12 pb-24 px-4">
+        <div className="flex flex-col md:flex-row ">
+          <div className="bg-[#59c9a5] text-white pt-12  pb-24 px-4">
             <h2 className="text-3xl font-bold tracking-tight mb-1">
               45,000 Pounds
             </h2>
@@ -460,6 +466,80 @@ export default function Home() {
               ))}
             </div>
             <div id="container__right">{renderItemContent()}</div>
+          </div>
+        </div>
+
+        <div>
+          <div className="max-w-6xl mx-auto md:px-8">
+            <div className="flex flex-col items-start px-3  lg:px-0">
+              <h2 className="font-semibold tracking-tight text-5xl mb-1">
+                Deal Stages
+              </h2>
+              <h5 className="text-gray-400 text-lg">
+                During a deal, we keep evrerything transparent and
+                understandable. We always focus on long-term cooperation .
+              </h5>
+            </div>
+            <div>
+              <div className="flex flex-col gap-8 px-4  sm:grid sm:grid-cols-2 md:grid-cols-3">
+                <div className="flex flex-col items-start relative ">
+                  <p className="text-9xl font-bold text-gray-200/60 absolute top-5 left-20  z-10">
+                    01
+                  </p>
+                  <IoMdPaperPlane className="huge-icon z-20 text-[#59c9a5]" />
+                  <p className="text-2xl font-light tracking-wider z-20">
+                    Application
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-start relative ">
+                  <p className="text-9xl font-bold text-gray-200/60 absolute top-5 left-20  z-10">
+                    02
+                  </p>
+                  <CiCalculator1 className="huge-icon z-20 text-[#59c9a5]" />
+                  <p className="text-2xl font-light tracking-wider">
+                    Calculation of the order cost and production time
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-start relative ">
+                  <p className="text-9xl font-bold text-gray-200/60 absolute top-5 left-20  z-10">
+                    03
+                  </p>
+
+                  <LiaFileContractSolid className="huge-icon z-20 text-[#59c9a5]" />
+                  <p className="text-2xl font-light tracking-wider">
+                    Conclusion of an agreement
+                  </p>
+                </div>
+                <div className="flex flex-col items-start relative ">
+                  <GiMoneyStack className="huge-icon z-20 text-[#59c9a5]" />
+                  <p className="text-9xl font-bold text-gray-200/60 absolute top-5 left-20  z-10">
+                    04
+                  </p>
+                  <p className="text-2xl font-light tracking-wider">Payment</p>
+                </div>
+                <div className="flex flex-col items-start relative ">
+                  <GrWorkshop className="smaller-big-icon z-20 text-[#59c9a5]" />
+                  <p className="text-9xl font-bold text-gray-200/60 absolute top-5 left-20  z-10">
+                    05
+                  </p>
+                  <p className="text-2xl font-light tracking-wider">
+                    Processing
+                  </p>
+                </div>
+                <div className="flex flex-col items-start relative ">
+                  <p className="text-9xl font-bold text-gray-200/60 absolute top-5 left-20  z-10">
+                    06
+                  </p>
+
+                  <PiTruckDuotone className="small-big-icon z-20 text-[#59c9a5]" />
+                  <p className="text-2xl font-light tracking-wider">
+                    Distributing
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
