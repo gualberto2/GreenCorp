@@ -4,10 +4,10 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="lg:text-left">
-      <div className="lg:flex lg:justify-between lg:max-w-6xl lg:mx-auto">
+      <div className="lg:flex lg:max-w-6xl lg:mx-auto">
         <div className="w-full lg:w-auto">
-          <form onSubmit="" className="w-[70%] mx-auto lg:w-full">
-            <div className="flex flex-col lg:flex-row lg:justify-between">
+          <form onSubmit="" className="w-[70%] mx-auto ">
+            <div className="flex flex-col">
               {/* Name Input Fields */}
               <div className="lg:flex">
                 {/* First Name */}
@@ -43,10 +43,9 @@ const Footer = () => {
                   />
                 </div>
               </div>
-
-              {/* Email and Phone Number */}
-              <div className="lg:flex lg:w-1/2 lg:pl-4">
-                {/* Email */}
+              {/* Email & Phone Number for lg */}
+              <div className="lg:flex">
+                {/* Email Desktops Name */}
                 <div className="flex flex-col lg:w-1/2 lg:pr-2">
                   <label
                     htmlFor="email"
@@ -58,11 +57,11 @@ const Footer = () => {
                     type="email"
                     id="email"
                     placeholder="johnwick@email.com"
-                    className="text-center transition duration-150 ease-in-out py-3 rounded-md bg-gray-200 border-gray-200 border-[1px] focus:bg-gray-300 focus:border-blue-800 focus:ring-transparent w-full"
+                    className="text-center w-full px-3 py-2 focus:ring-transparent bg-gray-200 border-gray-200 focus:bg-gray-300 focus:border-blue-800 border-[1px] rounded-md"
                     required
                   />
                 </div>
-                {/* Phone Number */}
+                {/* Phone Desktops Name */}
                 <div className="flex flex-col lg:w-1/2 lg:pl-2">
                   <label
                     htmlFor="phone"
@@ -74,7 +73,7 @@ const Footer = () => {
                     type="tel"
                     id="phone"
                     placeholder="(123)-456-7890"
-                    className="text-center transition duration-150 ease-in-out py-3 rounded-md bg-gray-200 border-gray-200 border-[1px] focus:bg-gray-300 focus:border-blue-800 focus:ring-transparent w-full"
+                    className="text-center w-full px-3 py-2 focus:ring-transparent bg-gray-200 border-gray-200 focus:bg-gray-300 focus:border-blue-800 border-[1px] rounded-md"
                     required
                   />
                 </div>
@@ -84,7 +83,7 @@ const Footer = () => {
               <div className="pt-4 lg:w-full">
                 <button
                   type="submit"
-                  className="w-full py-3 px-4 font-light text-md text-white bg-[#566E3D] rounded-md"
+                  className="w-full py-3 px-4 font-light text-md text-white bg-[#59c9a5] rounded-md"
                 >
                   Submit
                 </button>
@@ -97,11 +96,12 @@ const Footer = () => {
         <div className="flex flex-col w-[70%] mx-auto text-center pt-4 lg:w-auto lg:pt-0 lg:flex-row lg:justify-center">
           <div className="pt-4 border-t border-slate-400 lg:border-none lg:pt-0">
             <div className="flex justify-between text-lg lg:space-x-4">
-              <p className="lg:hover:cursor-pointer lg:hover:underline lg:decoration-green-500">
-                Home
-              </p>
+              <p>Home</p>
               <p className="lg:hover:cursor-pointer lg:hover:underline lg:decoration-green-500">
                 About
+              </p>
+              <p className="lg:hover:cursor-pointer lg:hover:underline lg:decoration-green-500">
+                Products
               </p>
               <p className="lg:hover:cursor-pointer lg:hover:underline lg:decoration-green-500">
                 Contact
