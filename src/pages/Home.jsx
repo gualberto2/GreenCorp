@@ -4,8 +4,8 @@ import { IoMdArrowDropright } from "react-icons/io";
 import { FaArrowRightToBracket } from "react-icons/fa6";
 
 // Card Imports:
-import Card from "../components/Card";
-import ProductSlider from "../components/ProductSlider";
+import Card from "../components/HomeComponents/Card";
+import ProductSlider from "../components/HomeComponents/ProductSlider";
 // import AboutImages from "../components/AboutImages";
 
 // Icon imports:
