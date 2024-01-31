@@ -27,7 +27,7 @@ export default function Products() {
           <FaArrowLeft className="w-10 h-10" />
         </Link>
       </div>
-      <div className="w-[60%] mx-auto mt-4">
+      <div className="w-[60%] mx-auto mt-4 lg:w[100%] lg:mx-auto">
         <ProductCarousel products={products} />
       </div>
     </div>
