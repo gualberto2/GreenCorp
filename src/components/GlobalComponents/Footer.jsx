@@ -3,17 +3,16 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="lg:text-left pt-12">
-      <div className="lg:flex lg:max-w-6xl lg:mx-auto">
-        <div className="w-full lg:w-auto border-t border-slate-400">
-          <h2 className="text-center text-2xl font-semibold">
+    <footer className="lg:text-left h-fit">
+      <div>
+        <div>
+          {/* <h2 className="text-center text-2xl font-semibold">
             Let's get in touch
-          </h2>
-          <form onSubmit="" className="w-[70%] mx-auto ">
+          </h2> */}
+          {/* <form onSubmit="" className="w-[70%] mx-auto ">
             <div className="flex flex-col">
-              {/* Name Input Fields */}
-              <div className="lg:flex">
-                {/* First Name */}
+
+            <div className="lg:flex">
                 <div className="flex flex-col lg:w-1/2 lg:pr-2">
                   <label
                     htmlFor="first"
@@ -29,7 +28,7 @@ const Footer = () => {
                     required
                   />
                 </div>
-                {/* Last Name */}
+
                 <div className="flex flex-col lg:w-1/2 lg:pl-2">
                   <label
                     htmlFor="last"
@@ -46,9 +45,9 @@ const Footer = () => {
                   />
                 </div>
               </div>
-              {/* Email & Phone Number for lg */}
+
               <div className="lg:flex">
-                {/* Email Desktops Name */}
+
                 <div className="flex flex-col lg:w-1/2 lg:pr-2">
                   <label
                     htmlFor="email"
@@ -64,7 +63,6 @@ const Footer = () => {
                     required
                   />
                 </div>
-                {/* Phone Desktops Name */}
                 <div className="flex flex-col lg:w-1/2 lg:pl-2">
                   <label
                     htmlFor="phone"
@@ -82,7 +80,6 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* Submit Button */}
               <div className="pt-4 lg:w-full">
                 <button
                   type="submit"
@@ -92,11 +89,11 @@ const Footer = () => {
                 </button>
               </div>
             </div>
-          </form>
+          </form> */}
         </div>
 
         {/* Navigation Links */}
-        <div className="flex flex-col justify-center w-[70%] mx-auto text-center pt-4 border-t border-slate-400">
+        <div className="w-[70%] mx-auto text-center pt-20 ">
           <div className="">
             <div className="flex justify-between lg:text-lg lg:pr-4 ">
               <p className="lg:hover:cursor-pointer lg:hover:underline lg:decoration-green-500 hidden lg:block md:block">
