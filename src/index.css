@@ -34,13 +34,9 @@ body {
 
 #navbar.scrolled {
   top: 0; /* Slide in */
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   color: black; /* Change text color */
-}
-
-#navbar.scrolled p {
-  color: black;
 }
 
 #navbar.scrolled h1 {
@@ -209,4 +205,18 @@ body {
 .small-big-icon {
   font-size: 8.2rem; /* 128px */
   line-height: 1;
+}
+
+/* Intersection animation stuff */
+.int-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden; /* Add visibility to hide the element completely */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, visibility 0.6s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible; /* Ensure the element is visible when it's shown */
 }
