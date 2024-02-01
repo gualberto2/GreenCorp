@@ -1,16 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { IoMdArrowDropright } from "react-icons/io";
-import { FaArrowRightToBracket } from "react-icons/fa6";
-
-// Card Imports:
-import Card from "../components/Card";
-import ProductSlider from "../components/ProductSlider";
-// import AboutImages from "../components/AboutImages";
-
 // Icon imports:
-
-import { AiFillCustomerService } from "react-icons/ai";
 import { GiWorld, GiCheckboxTree } from "react-icons/gi";
 import { GrUserWorker } from "react-icons/gr";
 import { GoLaw } from "react-icons/go";
@@ -20,7 +10,6 @@ import {
   FaArrowAltCircleDown,
 } from "react-icons/fa";
 import { MdConnectWithoutContact } from "react-icons/md";
-import { IoMdArrowDroprightCircle } from "react-icons/io";
 import { TiWorld } from "react-icons/ti";
 import { IoMdPaperPlane } from "react-icons/io";
 import { LiaFileContractSolid } from "react-icons/lia";
@@ -28,12 +17,17 @@ import { GiMoneyStack } from "react-icons/gi";
 import { CiCalculator1 } from "react-icons/ci";
 import { PiTruckDuotone } from "react-icons/pi";
 import { GrWorkshop } from "react-icons/gr";
+import { useNavigate } from "react-router-dom";
+import { IoMdArrowDropright } from "react-icons/io";
+import { FaArrowRightToBracket } from "react-icons/fa6";
 
 export default function Home() {
   // Below is state for the about us / services card section
-  const [activeItem, setActiveItem] = useState("Roving Fabric");
+  const [activeItem, setActiveItem] = useState("HDPE");
   const [showTitle, setShowTitle] = useState(true);
   const [hoveredCard, setHoveredCard] = useState(1);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -263,13 +257,22 @@ export default function Home() {
                 showTitle ? "opacity-100" : "opacity-0"
               }`}
             >
-              <p className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out ">
+              <p
+                className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out "
+                onClick={() => navigate("/about")}
+              >
                 About
               </p>
-              <p className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out ">
+              <p
+                className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out "
+                onClick={() => navigate("/products")}
+              >
                 Products
               </p>
-              <p className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out ">
+              <p
+                className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out "
+                onClick={() => navigate("/contact")}
+              >
                 Contact
               </p>
             </div>
@@ -431,7 +434,7 @@ export default function Home() {
 
       {/* Product section */}
       <div className="">
-        <div className="lg:max-w-6xl mx-auto mlgd:h-[500px]">
+        <div className="lg:max-w-6xl mx-auto lg:h-[500px]">
           <h2 className="text-6xl font-semibold tracking-tight text-center mt-4">
             Products
           </h2>
@@ -440,11 +443,7 @@ export default function Home() {
               id="container__left"
               className="flex flex-col space-y-8 md:w-fit justify-start px-4 md:px-0 mb-8"
             >
-              {[
-                "Roving Fabric",
-                "Fiberglass Products",
-                "Composite Gratings",
-              ].map((item) => (
+              {["HDPE"].map((item) => (
                 <div
                   key={item}
                   onClick={() => setActiveItem(item)}
