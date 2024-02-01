@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 
+import { IoMdArrowDropright } from "react-icons/io";
+import { FaArrowRightToBracket } from "react-icons/fa6";
+
 // Icon imports:
 import { GiWorld, GiCheckboxTree } from "react-icons/gi";
 import { GrUserWorker } from "react-icons/gr";
@@ -286,19 +289,19 @@ export default function Home() {
               KnJ GREEN PACK CORP.
             </h1>
             <div className="flex flex-col items-start justify-center mb-4 md:pt-10 md:mb-8">
-              <h2 className="text-5xl tracking-tighter mb-1 md:mb-0 px-2 md:px-4 md:mt-8 font-bold">
+              <h2 className="text-5xl tracking-tighter mb-1 md:mb-0 px-2 md:px-4 md:mt-8 font-light">
                 Making a Difference with Recycling
               </h2>
-              <p className="text-lg px-3 tracking-wide">
+              {/* <p className="text-lg px-3 tracking-wide">
                 Southern California's premier PCR Recycling factory and
                 manufacturer, we ensure high quality while reducing your
                 environmental footprint
-              </p>
+              </p> */}
             </div>
             <div>
               {/* contact stuff */}
               <div className="flex flex-col items-center mt-8">
-                <h2 className="text-3xl font-semibold tracking-tighter mb-1">
+                <h2 className="text-3xl font-light tracking-tighter mb-1">
                   Get a hold of us.
                 </h2>
 
