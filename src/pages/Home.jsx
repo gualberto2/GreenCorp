@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
+//
 import { IoMdArrowDropright } from "react-icons/io";
 import { FaArrowRightToBracket } from "react-icons/fa6";
-
+//
 // Card Imports:
 import Card from "../components/HomeComponents/Card";
 import ProductSlider from "../components/HomeComponents/ProductSlider";
@@ -30,6 +31,8 @@ import { PiTruckDuotone } from "react-icons/pi";
 import { GrWorkshop } from "react-icons/gr";
 
 export default function Home() {
+  // Navigate below
+  const navigate = useNavigate();
   // Below is state for the about us / services card section
   const [activeItem, setActiveItem] = useState("Roving Fabric");
   const [showTitle, setShowTitle] = useState(true);
@@ -263,13 +266,22 @@ export default function Home() {
                 showTitle ? "opacity-100" : "opacity-0"
               }`}
             >
-              <p className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out ">
+              <p
+                onClick={() => navigate("/about")}
+                className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out "
+              >
                 About
               </p>
-              <p className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out ">
+              <p
+                onClick={() => navigate("/products")}
+                className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out "
+              >
                 Products
               </p>
-              <p className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out ">
+              <p
+                onClick={() => navigate("/contact")}
+                className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out "
+              >
                 Contact
               </p>
             </div>

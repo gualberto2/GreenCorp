@@ -1,22 +1,38 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 // import KNJLogo from "../path-to-your-logo/logo.svg"; // Update with your logo path
 
 const Footer = () => {
+  // Navigation declaration
+  const navigate = useNavigate();
+
   return (
     <footer className="bg-gray-200 mt-2 pt-2 lg:mt-10 md:mt-10">
       {/* Navigation Links */}
       <div>
         <div className="flex gap-4">
-          <p className="hover:cursor-pointer hover:underline decoration-green-500">
+          <p
+            onClick={() => navigate("/")}
+            className="hover:cursor-pointer hover:underline decoration-green-500"
+          >
             Home
           </p>
-          <p className="hover:cursor-pointer hover:underline decoration-green-500">
+          <p
+            onClick={() => navigate("/about")}
+            className="hover:cursor-pointer hover:underline decoration-green-500"
+          >
             About
           </p>
-          <p className="hover:cursor-pointer hover:underline decoration-green-500">
+          <p
+            onClick={() => navigate("/products")}
+            className="hover:cursor-pointer hover:underline decoration-green-500"
+          >
             Products
           </p>
-          <p className="hover:cursor-pointer hover:underline decoration-green-500">
+          <p
+            onClick={() => navigate("/contact")}
+            className="hover:cursor-pointer hover:underline decoration-green-500"
+          >
             Contact
           </p>
         </div>

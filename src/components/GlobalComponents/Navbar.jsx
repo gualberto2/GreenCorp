@@ -26,7 +26,6 @@ export default function Navbar() {
           isScrolled ? "scrolled" : ""
         }`}
       >
-
         <div>
           <h1 className="font-display text-2xl text-center text-white">
             KnJ GREEN PACK CORP.
@@ -34,11 +33,10 @@ export default function Navbar() {
         </div>
         <div className=" flex-row justify-between hidden md:flex md:gap-6 items-center text-white font-light  text-lg tracking-tighter">
           <p onClick={() => navigate("/")}>Home</p>
-          <p>Products</p>
-          <p>About</p>
-          <p>Contact</p>
+          <p onClick={() => navigate("/products")}>Products</p>
+          <p onClick={() => navigate("/about")}>About</p>
+          <p onClick={() => navigate("/contact")}>Contact</p>
         </div>
-
       </div>
     </nav>
   );
