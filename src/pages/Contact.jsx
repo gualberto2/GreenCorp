@@ -119,48 +119,50 @@ export default function Contact() {
               <p className="font-light mb-2">(800) 212-2221</p>
             </div>
             {/* Add grid cols below */}
-            <div className="bg-slate-200 rounded-xl col-start-8 col-end-12">
-              <div className="grid grid-cols-2 grid-rows-1 place-items-center">
-                <div className="bg-slate-200 rounded-xl row-start-1 row-end-1 col-start-1 col-end-3">
+            <div className="bg-slate-200 col-start-8 col-end-12">
+              <div className="grid grid-cols-2 grid-rows-1 place-items-center py-20">
+                <div className="mt-2 mb-2 bg-slate-200 row-start-1 row-end-1 col-start-1 col-end-3">
                   <h3 className="text-3xl mb-2 font-semibold">Get in touch</h3>
                   <p className="font-light">You can reach us anytime</p>
                 </div>
-                <div className="bg-slate-200 rounded-xl row-start-2 row-end-2 col-start-1 col-end-3 w-full">
-                  <form className="bg-slate-200 rounded-xl">
-                    <div className="mt-2 mb-2 w-full">
-                      {/* First nanme */}
+                <div className="bg-slate-200 row-start-2 row-end-2 col-start-1 col-end-3 w-[70%]">
+                  <form className="bg-slate-200">
+                    <div className="rounded-lg mt-2 mb-2 w-full">
+                      {/* First name */}
                       <input
-                        className="bg-slate-200 border-2 border-slate-400 rounded-lg h-10 w-full"
+                        className="bg-slate-200 border border-slate-400 py-2 px-2 h-10 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-green-500"
                         type="text"
                         id="first"
                         placeholder="ex. John Wick"
                         required
                       />
                     </div>
-                    <div className="bg-slate-200 mt-2">
-                      {/* Email nanme */}
+                    <div className="rounded-lg mt-2 mb-2 w-full">
+                      {/* Email */}
                       <input
-                        className="bg-slate-200 border-2 border-slate-400 rounded-lg h-10 w-full"
-                        type="email"
-                        id="email"
+                        className="bg-slate-200 border border-slate-400 py-2 px-2 h-10 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+                        type="text"
+                        id="first"
                         placeholder="johnwick@email.com"
                         required
                       />
                     </div>
-                    <div className="mt-2">
-                      {/* Text box */}
+                    <div className="rounded-xl mt-2 mb-2 w-full ">
+                      {/* Textbox */}
                       <textarea
-                        className="bg-slate-200 border-2 border-slate-400 rounded-lg px-2 h-auto w-full"
+                        className="bg-slate-200 border border-slate-400 h-10 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-green-500"
                         type="text"
-                        id="inputBox"
+                        id="first"
                         placeholder="How can we help?"
+                        required
                       />
                     </div>
+
                     <div>
                       {/* Submit button */}
                       <button
                         type="submit"
-                        className="mt-4 mb-2 py-1 px-4 font-light text-md text-white bg-[#59c9a5] rounded-md"
+                        className="mt-4 mb-2 py-1 px-4 font-light text-md text-white bg-[#59c9a5] rounded-full w-full"
                       >
                         Submit
                       </button>
