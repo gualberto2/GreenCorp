@@ -103,6 +103,75 @@ export default function Contact() {
           </form>
         </div>
       </div>
+
+      {/* Desktop and Tablet Page */}
+      <div className="hidden lg:block md:block">
+        <div className="flex items-center w-full">
+          <div className="grid grid-cols-12 mt-10">
+            {/* Add grid cols below */}
+            <div className="col-start-3 col-end-7">
+              <h2 className="text-6xl mb-4 font-semibold">Contact Us</h2>
+              <p className="font-light mb-2">
+                Email, call, or complete the form to learn more about our
+                products
+              </p>
+              <p className="font-light mb-2">info@knjgreenpack.com</p>
+              <p className="font-light mb-2">(800) 212-2221</p>
+            </div>
+            {/* Add grid cols below */}
+            <div className="bg-slate-200 rounded-xl col-start-8 col-end-12">
+              <div className="grid grid-cols-2 grid-rows-1 place-items-center">
+                <div className="bg-slate-200 rounded-xl row-start-1 row-end-1 col-start-1 col-end-3">
+                  <h3 className="text-3xl mb-2 font-semibold">Get in touch</h3>
+                  <p className="font-light">You can reach us anytime</p>
+                </div>
+                <div className="bg-slate-200 rounded-xl row-start-2 row-end-2 col-start-1 col-end-3 w-full">
+                  <form className="bg-slate-200 rounded-xl">
+                    <div className="mt-2 mb-2 w-full">
+                      {/* First nanme */}
+                      <input
+                        className="bg-slate-200 border-2 border-slate-400 rounded-lg h-10 w-full"
+                        type="text"
+                        id="first"
+                        placeholder="ex. John Wick"
+                        required
+                      />
+                    </div>
+                    <div className="bg-slate-200 mt-2">
+                      {/* Email nanme */}
+                      <input
+                        className="bg-slate-200 border-2 border-slate-400 rounded-lg h-10 w-full"
+                        type="email"
+                        id="email"
+                        placeholder="johnwick@email.com"
+                        required
+                      />
+                    </div>
+                    <div className="mt-2">
+                      {/* Text box */}
+                      <textarea
+                        className="bg-slate-200 border-2 border-slate-400 rounded-lg px-2 h-auto w-full"
+                        type="text"
+                        id="inputBox"
+                        placeholder="How can we help?"
+                      />
+                    </div>
+                    <div>
+                      {/* Submit button */}
+                      <button
+                        type="submit"
+                        className="mt-4 mb-2 py-1 px-4 font-light text-md text-white bg-[#59c9a5] rounded-md"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
     //
   );
