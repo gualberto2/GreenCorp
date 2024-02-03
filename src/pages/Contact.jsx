@@ -46,7 +46,7 @@ export default function Contact() {
         </div>
         {/* Box for email */}
         <div className="w-[80%] mx-auto bg-blue-200 mt-6 flex flex-col rounded-2xl">
-          {/* Phone content */}
+          {/* Email content */}
           <div className="w-[95%] mx-auto">
             <div className="mt-4">
               <MdEmail className="w-10 h-10" />
@@ -60,6 +60,47 @@ export default function Contact() {
               <p>support@knjgreenpack.com</p>
             </div>
           </div>
+        </div>
+        {/* Form Box Below */}
+        <div className="mt-6 mb-8">
+          <form onSubmit="">
+            <div className="flex flex-col w-[50%] ml-[10%]">
+              <div>
+                <label htmlFor="first" className="font-light text-md text-gray">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="first"
+                  placeholder="ex. John Wick"
+                  className="text-center w-full px-3 py-2 focus:ring-transparent bg-gray-200 border-gray-200 focus:bg-gray-300 focus:border-blue-800 border-[1px] rounded-md"
+                  required
+                />
+              </div>
+
+              <div className="">
+                <label htmlFor="email" className="font-light text-md text-gray">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="johnwick@email.com"
+                  className="text-center w-full px-3 py-2 focus:ring-transparent bg-gray-200 border-gray-200 focus:bg-gray-300 focus:border-blue-800 border-[1px] rounded-md"
+                  required
+                />
+              </div>
+
+              <div className="text-left mt-4">
+                <button
+                  type="submit"
+                  className="py-3 px-4 font-light text-md text-white bg-[#59c9a5] rounded-md"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </>
