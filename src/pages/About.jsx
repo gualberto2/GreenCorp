@@ -78,10 +78,10 @@ export default function About() {
 
         <div className="about-bg ">
           <div className="px-8 my-16 py-8">
-            <h2 className="text-4xl text-white tracking-tighter font-semibold mb-4">
+            <h2 className="text-4xl text-white tracking-tighter font-semibold ">
               We are engaged in our distribution process
             </h2>
-            <div class="text-white flex flex-col gap-4 md:hidden pl-10">
+            <div class="text-white flex flex-col gap-8 md:hidden pl-10 my-14">
               <div>
                 <div class="number relative font-bold  text-3xl before:absolute before:bg-orange-500 before:w-1 before:h-12 before:-left-4 before:top-1/2 before:-translate-y-1/2 after:absolute after:bg-black after:w-1 after:h-full after:-left-4 after:top-1/2 after:-translate-y-1/2 after:-z-10">
                   01
@@ -121,9 +121,9 @@ export default function About() {
           </div>
         </div>
 
-        <div class="bg-white text-gray-800 my-16">
+        <div class="bg-white text-gray-800 my-16 mx-auto max-w-sm md:max-w-2xl">
           <div class="">
-            <div className="flex flex-row px-2 gap-6 justify-center tracking-tighter align-top mb-16">
+            <div className="flex flex-row justify-center px-2 gap-6  tracking-tighter align-top mb-16">
               {" "}
               <h2 className="text-6xl font-semibold">5</h2>
               <h3 className="text-4xl font-bold text-ellipsis tracking-tighter flex flex-col">
@@ -132,8 +132,8 @@ export default function About() {
               </h3>
             </div>
 
-            <div class="content-border mx-8">
-              <ul className="text-md font-medium tracking-wide custom-list flex flex-col gap-10 max-w-lg leading-5">
+            <div class=" border-l-[3px] md:border-t-[3px] md:border-l-0 pl-8 mx-8">
+              <ul className="text-md font-medium tracking-wide custom-list flex flex-col md:flex-row gap-10 max-w-lg leading-5">
                 <li>Own production</li>
                 <li>
                   Manufacturing according to individual sizes and customer
