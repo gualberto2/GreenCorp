@@ -11,6 +11,32 @@ body {
   scrollbar-width: none;
 }
 
+/* Chillax */
+@font-face {
+  font-family: "Chillax";
+  src: url("//cdn.fontshare.com/wf/ZYDQ23QUC5RIWZP2XNQDB6EQIKJAJRWI/OQWULF7QT4HTMBH6W3XY6DESOSZLWT3L/7L7IIHAKMJC3Z2MTNHMMKSRMMTKZN4OJ.woff2")
+      format("woff2"),
+    url("//cdn.fontshare.com/wf/ZYDQ23QUC5RIWZP2XNQDB6EQIKJAJRWI/OQWULF7QT4HTMBH6W3XY6DESOSZLWT3L/7L7IIHAKMJC3Z2MTNHMMKSRMMTKZN4OJ.woff")
+      format("woff"),
+    url("//cdn.fontshare.com/wf/ZYDQ23QUC5RIWZP2XNQDB6EQIKJAJRWI/OQWULF7QT4HTMBH6W3XY6DESOSZLWT3L/7L7IIHAKMJC3Z2MTNHMMKSRMMTKZN4OJ.ttf")
+      format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* h4 - p tag font */
+h4,
+h5,
+h6,
+p,
+a,
+li,
+ul,
+button {
+  font-family: "Chillax";
+}
+
 /* Selection / Highlighting stuff */
 */ ::-moz-selection {
   /* Code for Firefox */
@@ -219,4 +245,55 @@ body {
   opacity: 1;
   transform: translateY(0);
   visibility: visible; /* Ensure the element is visible when it's shown */
+}
+
+/* About background image styling */
+.about-bg {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65) 10%,
+      rgba(54, 48, 48, 0.65)
+    ),
+    url("https://files.oaiusercontent.com/file-W2ZK7DqEAejCtgfTuen3gNt9?se=2024-02-01T17%3A57%3A54Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D748c5912-355d-4d33-82aa-a37f5f9c84e9.webp&sig=XfqvP%2Bm6GAAOdn7CBBly7PhXl6JymbB2IqC9jP4EqjI%3D");
+  background-repeat: no-repeat; /* Prevents background from repeating */
+  background-size: cover; /* Makes the image scale to cover the element */
+  background-position: center; /* Centers the background image */
+}
+
+/* About page - 5 reasons why section */
+.content-border {
+  border-left: 2px solid #ccc; /* Example border color */
+  padding-left: 18px; /* Adjust this value as needed to align with the dots */
+}
+
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0; /* Ensure the list aligns properly with the border */
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 20px; /* This creates space for the dot */
+}
+
+/* Little dot stuff */
+.custom-list li::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ed652b;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* About page we are engaged in distribution section */
+.highlight-class {
+  border-top: 2px solid #ff0000; /* Red border for highlighting */
+  transition: border-top-color 0.5s ease;
+  /* Other styles to make the active item stand out */
 }
