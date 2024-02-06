@@ -7,10 +7,10 @@ const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <footer className="bg-gray-200 mt-2 pt-2 lg:mt-10 md:mt-10">
+    <footer className="bg-gray-200 mt-2 pt-2 lg:mt-10 md:mt-10 lg:mx-auto lg:text-center md:mx-auto md:text-center">
       {/* Navigation Links */}
-      <div>
-        <div className="flex gap-4">
+      <div className="">
+        <div className="flex gap-4 lg:mx-auto lg:justify-center md:mx-auto md:justify-center">
           <p
             onClick={() => navigate("/")}
             className="hover:cursor-pointer hover:underline decoration-green-500"
