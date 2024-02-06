@@ -32,10 +32,27 @@ export default function Navbar() {
           </h1>
         </div>
         <div className=" flex-row justify-between hidden md:flex md:gap-6 items-center text-white font-light  text-lg tracking-tighter">
-          <p onClick={() => navigate("/")}>Home</p>
-          <p onClick={() => navigate("/products")}>Products</p>
-          <p onClick={() => navigate("/about")}>About</p>
-          <p onClick={() => navigate("/contact")}>Contact</p>
+          <p onClick={() => navigate("/")} className="hover:cursor-pointer">
+            Home
+          </p>
+          <p
+            onClick={() => navigate("/products")}
+            className="hover:cursor-pointer"
+          >
+            Products
+          </p>
+          <p
+            onClick={() => navigate("/about")}
+            className="hover:cursor-pointer"
+          >
+            About
+          </p>
+          <p
+            onClick={() => navigate("/contact")}
+            className="hover:cursor-pointer"
+          >
+            Contact
+          </p>
         </div>
       </div>
     </nav>
