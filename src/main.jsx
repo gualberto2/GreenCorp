@@ -13,6 +13,7 @@ import About from "./pages/About.jsx";
 
 import Contact from "./pages/Contact.jsx";
 import Products from "./pages/Products.jsx";
+import Contact from "./pages/Contact.jsx";
 import Footer from "./components/GlobalComponents/Footer.jsx";
 
 export default function App() {
