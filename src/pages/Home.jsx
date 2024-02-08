@@ -1,5 +1,16 @@
 import React, { useEffect, useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+//
+import { IoMdArrowDropright } from "react-icons/io";
+import { FaArrowRightToBracket } from "react-icons/fa6";
+//
+// Card Imports:
+import Card from "../components/HomeComponents/Card";
+import ProductSlider from "../components/HomeComponents/ProductSlider";
+// import AboutImages from "../components/AboutImages";
+
+
 // Icon imports:
 import { GiWorld, GiCheckboxTree } from "react-icons/gi";
 import { GrUserWorker } from "react-icons/gr";
@@ -23,6 +34,8 @@ import { FaArrowRightToBracket } from "react-icons/fa6";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 export default function Home() {
+  // Navigate below
+  const navigate = useNavigate();
   // Below is state for the about us / services card section
   const [activeItem, setActiveItem] = useState("HDPE");
   const [showTitle, setShowTitle] = useState(true);
@@ -279,20 +292,26 @@ export default function Home() {
               }`}
             >
               <p
+
                 className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out "
                 onClick={() => navigate("/about")}
+
               >
                 About
               </p>
               <p
+
                 className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out "
                 onClick={() => navigate("/products")}
+
               >
                 Products
               </p>
               <p
+
                 className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out "
                 onClick={() => navigate("/contact")}
+
               >
                 Contact
               </p>

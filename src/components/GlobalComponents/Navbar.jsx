@@ -38,28 +38,36 @@ export default function Navbar() {
             KnJ GREEN PACK CORP.
           </h1>
         </div>
+
         <div className=" flex-row justify-between hidden md:flex md:gap-6 text-white items-center  font-light  text-lg tracking-tighter">
           <p
             onClick={() => navigate("/")}
             className="hover:cursor-pointer  transition duration-150 ease-in-out hover:text-[#56e39f]"
           >
+
             Home
           </p>
           <p
             onClick={() => navigate("/products")}
+
             className="hover:cursor-pointer hover:text-[#56e39f]  transition duration-150 ease-in-out"
+
           >
             Products
           </p>
           <p
             onClick={() => navigate("/about")}
+
             className="hover:cursor-pointer transition duration-150 ease-in-out hover:text-[#56e39f]"
+
           >
             About
           </p>
           <p
             onClick={() => navigate("/contact")}
+
             className="hover:cursor-pointer hover:text-[#56e39f]  transition duration-150 ease-in-out"
+
           >
             Contact
           </p>
