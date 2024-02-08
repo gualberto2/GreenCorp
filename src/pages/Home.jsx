@@ -530,9 +530,9 @@ export default function Home() {
         </div>
 
         <div>
-          <div className="max-w-6xl mx-auto md:px-8">
-            <div className="flex flex-col items-start px-3  lg:px-0">
-              <h2 className="font-semibold tracking-tight text-5xl mb-1">
+          <div className="max-w-6xl mx-auto md:px-8 my-36">
+            <div className="flex flex-col items-start px-3 lg:px-0">
+              <h2 className="font-bold tracking-tighter text-5xl mb-1">
                 Deal Stages
               </h2>
               <h5 className="text-gray-400 text-lg">
