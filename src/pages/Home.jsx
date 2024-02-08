@@ -1,27 +1,17 @@
 import React, { useEffect, useState } from "react";
+
 import { useNavigate } from "react-router-dom";
-//
-import { IoMdArrowDropright } from "react-icons/io";
-import { FaArrowRightToBracket } from "react-icons/fa6";
-//
-// Card Imports:
-import Card from "../components/HomeComponents/Card";
-import ProductSlider from "../components/HomeComponents/ProductSlider";
-// import AboutImages from "../components/AboutImages";
 
 // Icon imports:
-
-import { AiFillCustomerService } from "react-icons/ai";
 import { GiWorld, GiCheckboxTree } from "react-icons/gi";
 import { GrUserWorker } from "react-icons/gr";
-import { GoLaw } from "react-icons/go";
+
 import {
   FaRecycle,
   FaPeopleArrows,
   FaArrowAltCircleDown,
 } from "react-icons/fa";
 import { MdConnectWithoutContact } from "react-icons/md";
-import { IoMdArrowDroprightCircle } from "react-icons/io";
 import { TiWorld } from "react-icons/ti";
 import { IoMdPaperPlane } from "react-icons/io";
 import { LiaFileContractSolid } from "react-icons/lia";
@@ -29,13 +19,17 @@ import { GiMoneyStack } from "react-icons/gi";
 import { CiCalculator1 } from "react-icons/ci";
 import { PiTruckDuotone } from "react-icons/pi";
 import { GrWorkshop } from "react-icons/gr";
+import { IoMdArrowDropright } from "react-icons/io";
+import { FaArrowRightToBracket } from "react-icons/fa6";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 export default function Home() {
   // Navigate below
   const navigate = useNavigate();
   // Below is state for the about us / services card section
-  const [activeItem, setActiveItem] = useState("Roving Fabric");
+  const [activeItem, setActiveItem] = useState("HDPE");
   const [showTitle, setShowTitle] = useState(true);
+  const [currentSection, setCurrentSection] = useState(0);
   const [hoveredCard, setHoveredCard] = useState(1);
 
   useEffect(() => {
@@ -95,10 +89,29 @@ export default function Home() {
     },
   ];
 
-  const hoveredImage = serviceImages.find((image) => image.id === hoveredCard);
-  const calculateTranslateX = (hoveredCard) => {
-    // Assuming each card takes up 33.33% of the space (for 3 cards)
-    return (hoveredCard - 1) * 100;
+  const sections = [
+    {
+      title: "45,000 Pounds",
+      description: "Of monthly storage volume of roving fabric in warehouse",
+    },
+    {
+      title: "Shipping same day guaranteed!",
+      description:
+        "Upon conclusion of an agreement and 100% prepayment - the minimum period for issuing an order is from 1 day",
+    },
+    {
+      title: "We work with VAT",
+      description:
+        "Quality guarantee under the contract. Conclusion of contracts for tender procurement Federal Law-44 and Federal Law-223",
+    },
+  ];
+
+  const nextSection = () => {
+    setCurrentSection((currentSection + 1) % sections.length);
+  };
+
+  const prevSection = () => {
+    setCurrentSection((currentSection - 1 + sections.length) % sections.length);
   };
 
   const renderItemContent = () => {
@@ -216,7 +229,7 @@ export default function Home() {
         return (
           <div className="flex flex-col md:flex-row justify-start">
             <div className="flex flex-row justify-center gap-2 items-center">
-              <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
+              <div className="text-2xl text-white bg-[#59c9a5]  rounded-full p-2 pr-3">
                 <FaArrowRightToBracket />
               </div>
               <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -235,7 +248,7 @@ export default function Home() {
         return (
           <div className="flex flex-col md:flex-row justify-start">
             <div className="flex flex-row justify-center gap-2 items-center">
-              <div className="text-2xl text-white bg-green-500 rounded-full p-2 pr-3">
+              <div className="text-2xl text-white bg-[#59c9a5]  rounded-full p-2 pr-3">
                 <FaArrowRightToBracket />
               </div>
               <p className="text-2xl  font-medium tracking-wide lowercase">
@@ -267,20 +280,20 @@ export default function Home() {
               }`}
             >
               <p
-                onClick={() => navigate("/about")}
                 className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out "
+                onClick={() => navigate("/about")}
               >
                 About
               </p>
               <p
-                onClick={() => navigate("/products")}
                 className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out "
+                onClick={() => navigate("/products")}
               >
                 Products
               </p>
               <p
-                onClick={() => navigate("/contact")}
                 className="hover:text-green-400 hover:cursor-pointer transition duration-300 ease-in-out "
+                onClick={() => navigate("/contact")}
               >
                 Contact
               </p>
@@ -423,18 +436,28 @@ export default function Home() {
 
       {/* Middle Support  */}
       <div className="w-full">
-        <div className="flex flex-col md:flex-row ">
-          <div className="bg-[#59c9a5] text-white pt-12  pb-24 px-4">
-            <h2 className="text-3xl font-bold tracking-tight mb-1">
-              45,000 Pounds
-            </h2>
-            <p className="text-lg font-light tracking-wide">
-              Of monthly storage volume of roving fabric in warehouse
-            </p>
+        <div className="flex flex-col md:flex-row md:grid md:grid-cols-8">
+          <div className="col-start-1 col-end-4 bg-[#59c9a5] text-white pt-12 pb-24 px-10 md:px-20 flex flex-col justify-between">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight mb-1">
+                {sections[currentSection].title}
+              </h2>
+              <p className="text-lg font-light tracking-wide">
+                {sections[currentSection].description}
+              </p>
+            </div>
+            <div className="flex justify-around mt-4">
+              <p className="cursor-pointer text-5xl" onClick={prevSection}>
+                <FaArrowAltCircleLeft />
+              </p>
+              <p className="cursor-pointer text-5xl" onClick={nextSection}>
+                <FaArrowAltCircleRight />
+              </p>
+            </div>
           </div>
 
           <img
-            className="object-cover w-full h-[300px]"
+            className="object-cover w-full col-start-4 col-end-9 h-[500px]"
             src="https://kmsibir.ru/upload/iblock/572/lyz6j3z00d7d8jomqhpu4s452m9t1sah.jpg"
             alt=""
           />
@@ -443,7 +466,7 @@ export default function Home() {
 
       {/* Product section */}
       <div className="">
-        <div className="lg:max-w-6xl mx-auto mlgd:h-[500px]">
+        <div className="lg:max-w-6xl mx-auto lg:h-[500px]">
           <h2 className="text-6xl font-semibold tracking-tight text-center mt-4">
             Products
           </h2>
@@ -452,11 +475,7 @@ export default function Home() {
               id="container__left"
               className="flex flex-col space-y-8 md:w-fit justify-start px-4 md:px-0 mb-8"
             >
-              {[
-                "Roving Fabric",
-                "Fiberglass Products",
-                "Composite Gratings",
-              ].map((item) => (
+              {["HDPE", "LDPE", "LLDPE", "PP", "PS"].map((item) => (
                 <div
                   key={item}
                   onClick={() => setActiveItem(item)}
@@ -481,10 +500,40 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Middle Support  */}
+        <div className="w-full">
+          <div className="flex flex-col sm:flex-row md:grid md:grid-cols-8 md:grid-rows-1">
+            <img
+              className="object-cover w-full col-start-1 col-end-4  h-[500px]"
+              src="https://kmsibir.ru/upload/iblock/572/lyz6j3z00d7d8jomqhpu4s452m9t1sah.jpg"
+              alt=""
+            />
+
+            <div className=" bg-[#59c9a5]  text-white pt-12 pb-24 px-10  flex flex-col justify-between col-start-4 col-end-9 row-span-1">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight mb-1">
+                  {sections[currentSection].title}
+                </h2>
+                <p className="text-lg font-light tracking-wide">
+                  {sections[currentSection].description}
+                </p>
+              </div>
+              <div className="flex justify-around mt-4">
+                <p className="cursor-pointer text-5xl" onClick={prevSection}>
+                  <FaArrowAltCircleLeft />
+                </p>
+                <p className="cursor-pointer text-5xl" onClick={nextSection}>
+                  <FaArrowAltCircleRight />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div>
-          <div className="max-w-6xl mx-auto md:px-8">
-            <div className="flex flex-col items-start px-3  lg:px-0">
-              <h2 className="font-semibold tracking-tight text-5xl mb-1">
+          <div className="max-w-6xl mx-auto md:px-8 my-36">
+            <div className="flex flex-col items-start px-3 lg:px-0">
+              <h2 className="font-bold tracking-tighter text-5xl mb-1">
                 Deal Stages
               </h2>
               <h5 className="text-gray-400 text-lg">
@@ -554,54 +603,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* About & Services */}
-        {/* <div className="grid grid-cols-12 grid-rows-1">
-          <div className="col-start-1 col-end-7 row-start-0">
-            {hoveredImage && (
-              <div className="h-[100%] overflow-clip">
-                <img
-                  src={hoveredImage.img}
-                  alt={`Service ${hoveredCard}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-          </div>
-          <div className="col-start-7 col-end-13 justify-center">
-            <div className="flex gap-2 hover:cursor-pointer mt-10 mx-2">
-              <Card
-                onMouseEnter={() => setHoveredCard(1)}
-                onMouseLeave={() => setHoveredCard(1)}
-                icon={<FaRecycle />}
-                title="Recycling"
-                description="Together we reduce carbon footprints by collecting your recycable materials"
-              />
-              <Card
-                onMouseEnter={() => setHoveredCard(2)}
-                onMouseLeave={() => setHoveredCard(1)}
-                icon={<AiFillCustomerService />}
-                title="Quality"
-                description="Our team of 150 hand sorters ensure high quality products"
-              />
-              <Card
-                onMouseEnter={() => setHoveredCard(3)}
-                onMouseLeave={() => setHoveredCard(1)}
-                icon={<GoLaw />}
-                title="Mix"
-                description="Increase ESG Scores with 80% Virgin & 20% Recycled Products"
-              />
-            </div>
-          </div>
-          <div className="sliding-bar-container col-start-7 col-end-13">
-            <div
-              className="sliding-bar pt-2"
-              style={{
-                transform: `translateX(${calculateTranslateX(hoveredCard)}%)`,
-              }}
-            ></div>
-          </div>
-        </div> */}
       </div>
     </div>
   );
