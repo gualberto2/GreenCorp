@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
-//
-import { IoMdArrowDropright } from "react-icons/io";
-import { FaArrowRightToBracket } from "react-icons/fa6";
-//
-// Card Imports:
-import Card from "../components/HomeComponents/Card";
-import ProductSlider from "../components/HomeComponents/ProductSlider";
-// import AboutImages from "../components/AboutImages";
 
 // Icon imports:
 import { GiWorld, GiCheckboxTree } from "react-icons/gi";
 import { GrUserWorker } from "react-icons/gr";
-import { GoLaw } from "react-icons/go";
+
 import {
   FaRecycle,
   FaPeopleArrows,
@@ -27,7 +19,6 @@ import { GiMoneyStack } from "react-icons/gi";
 import { CiCalculator1 } from "react-icons/ci";
 import { PiTruckDuotone } from "react-icons/pi";
 import { GrWorkshop } from "react-icons/gr";
-import { useNavigate } from "react-router-dom";
 import { IoMdArrowDropright } from "react-icons/io";
 import { FaArrowRightToBracket } from "react-icons/fa6";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
