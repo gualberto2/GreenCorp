@@ -121,28 +121,53 @@ export default function About() {
           </div>
         </div>
 
-        <div class="bg-white text-gray-800 my-16 mx-auto max-w-sm md:max-w-2xl">
-          <div class="">
-            <div className="flex flex-row justify-center px-2 gap-6  tracking-tighter align-top mb-16">
-              {" "}
-              <h2 className="text-6xl font-semibold">5</h2>
-              <h3 className="text-4xl font-bold text-ellipsis tracking-tighter flex flex-col">
-                <span>Reasons</span>
-                <span>to work with us</span>
-              </h3>
+        <div class="bg-white text-gray-800 my-16 mx-auto max-w-2xl">
+          <div class="text-center">
+            <div class="mb-16">
+              <div class="text-6xl font-semibold inline-block mr-4">5</div>
+              <div class="text-4xl font-bold tracking-tighter inline-block align-top">
+                <div>Reasons</div>
+                <div>to work with us</div>
+              </div>
             </div>
 
-            <div class=" border-l-[3px] md:border-t-[3px] md:border-l-0 pl-8 mx-8">
-              <ul className="text-md font-medium tracking-wide custom-list flex flex-col md:flex-row gap-10 max-w-lg leading-5">
-                <li>Own production</li>
-                <li>
-                  Manufacturing according to individual sizes and customer
-                  requirements
-                </li>
-                <li>Short production times and high quality products</li>
-                <li>Fast delivery</li>
-                <li>All products are certified</li>
-              </ul>
+            <div class="relative border-l-2 md:border-t-2 md:border-l-0 border-gray-300 mx-20 flex justify-center">
+              <div class="flex flex-col md:flex-row justify-between  -mt-2">
+                <div class="text-left px-2 flex flex-row md:flex-col items-center ">
+                  <div class="h-3 w-3 bg-green-600 rounded-full -ml-[15px] md:mb-1"></div>
+                  <span class="text-left text-md font-medium ml-16">
+                    Own production
+                  </span>
+                </div>
+
+                <div class="text-left px-2 flex flex-row md:flex-col items-center ">
+                  <div class="h-3 w-3 bg-green-600 rounded-full -ml-[15px] md:mb-1"></div>
+                  <span class="text-left text-md font-medium ml-16">
+                    Own production
+                  </span>
+                </div>
+
+                <div class="text-left px-2 flex flex-row md:flex-col items-center ">
+                  <div class="h-3 w-3 bg-green-600 rounded-full -ml-[15px] md:mb-1"></div>
+                  <span class="text-left text-md font-medium ml-16">
+                    Own production
+                  </span>
+                </div>
+
+                <div class="text-left px-2 flex flex-row md:flex-col items-center ">
+                  <div class="h-3 w-3 bg-green-600 rounded-full -ml-[15px] md:mb-1"></div>
+                  <span class="text-left text-md font-medium ml-16">
+                    Own production
+                  </span>
+                </div>
+
+                <div class="text-left px-2 flex flex-row md:flex-col items-center ">
+                  <div class="h-3 w-3 bg-green-600 rounded-full -ml-[15px] md:mb-1"></div>
+                  <span class="text-left text-md font-medium ml-16">
+                    Own production
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
