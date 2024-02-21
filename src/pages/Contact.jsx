@@ -1,12 +1,9 @@
-import React from "react";
 // Icons below
 import { FaArrowLeft } from "react-icons/fa";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 //
 import { Link } from "react-router-dom";
-
-// Import phone icon
 
 export default function Contact() {
   return (
