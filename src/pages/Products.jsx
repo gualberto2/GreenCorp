@@ -58,8 +58,26 @@ export default function Products() {
       </div>
 
       {/* Desktop Grid */}
-      <div className="hidden lg:block"></div>
-
+      <div className="hidden lg:block">
+        <div className="grid grid-cols-3 gap-4">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="product-card p-4 shadow-lg rounded-lg"
+            >
+              <img
+                src={product.img}
+                alt={product.title}
+                className="w-full h-auto object-cover rounded"
+              />
+              <h2 className="text-xl font-bold mt-2">{product.title}</h2>
+              <p className="text-gray-600">{product.desc}</p>
+              {/* Add more product details here */}
+            </div>
+          ))}
+          ;
+        </div>
+      </div>
       {/* Error Handling */}
       {error && <p className="text-red-500">{error}</p>}
     </div>
