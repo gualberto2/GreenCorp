@@ -49,14 +49,15 @@ export default function Products() {
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          {products.map((product) => (
-            <SwiperSlide key={product.id} className="product-card">
-              {/* Render your product details here */}
-              <img src={product.img} alt={product.title} />
-              <h2>{product.title}</h2>
-              <p>{product.desc}</p>
-            </SwiperSlide>
-          ))}
+          {products &&
+            products.map((product) => (
+              <SwiperSlide key={product.id} className="product-card">
+                {/* Render your product details here */}
+                <img src={product.img} alt={product.title} />
+                <h2>{product.title}</h2>
+                <p>{product.desc}</p>
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
 
