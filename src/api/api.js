@@ -3,7 +3,7 @@ import axios from "axios";
 const fetchProducts = async () => {
   try {
     const response = await axios.get(
-      "http://localhost:1337/api/products?populate=*"
+      "https://knj-cms-system-11bdd0096622.herokuapp.com/api/products?populate=*"
     );
     return response.data;
   } catch (error) {
