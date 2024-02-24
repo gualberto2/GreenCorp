@@ -84,21 +84,22 @@ export default function Products() {
         {/* Below are the dynamic prosduct cards */}
         <div className="container mx-auto w-[70%]">
           <div className="grid grid-cols-3 gap-8">
-            {products.map((product) => (
-              <div
-                key={product.id}
-                className="product-card p-4 shadow-lg shadow-black rounded-3xl bg-[#f1efef] mt-12 mb-32 transition transform hover:cursor-pointer hover:scale-105 hover:shadow-2xl"
-              >
-                <img
-                  src={product.img}
-                  alt={product.title}
-                  className="w-full h-auto object-cover rounded"
-                />
-                <h2 className="text-xl font-bold mt-2">{product.title}</h2>
-                <p className="text-gray-600">{product.desc}</p>
-                {/* Add more product details here */}
-              </div>
-            ))}
+            {products &&
+              products.map((product) => (
+                <div
+                  key={product.id}
+                  className="product-card p-4 shadow-lg shadow-black rounded-3xl bg-[#f1efef] mt-12 mb-32 transition transform hover:cursor-pointer hover:scale-105 hover:shadow-2xl"
+                >
+                  <img
+                    src={product.img}
+                    alt={product.title}
+                    className="w-full h-auto object-cover rounded"
+                  />
+                  <h2 className="text-xl font-bold mt-2">{product.title}</h2>
+                  <p className="text-gray-600">{product.desc}</p>
+                  {/* Add more product details here */}
+                </div>
+              ))}
           </div>
         </div>
         {/* Above is the grid layout for the cards which are dynamic and add or remove based on the addition or deletion of new products */}
