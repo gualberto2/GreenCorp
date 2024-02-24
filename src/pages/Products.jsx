@@ -16,23 +16,23 @@ export default function Products() {
       if (result.data && !result.error) {
         const formattedProducts = result.data.map((item) => {
           const { id, attributes } = item;
-          const { Product_Title, Product_Desc, Product_IMG } = attributes;
-          // Assuming the first image in the data array is the primary image.
+          const { product_title, product_desc, product_Img } = attributes;
+
           const imageUrl =
-            Product_IMG.data.length > 0
-              ? `https://knj-cms-system-11bdd0096622.herokuapp.com${Product_IMG.data[0].attributes.url}` // Prefix with your API base URL
+            product_Img.data.length > 0
+              ? product_Img.data[0].attributes.url
               : "";
 
           return {
             id,
-            title: Product_Title,
-            desc: Product_Desc,
+            title: product_title,
+            desc: product_desc,
             img: imageUrl,
           };
         });
         setProducts(formattedProducts);
       } else {
-        setError(result.error || "An unknown error occurred!");
+        setError(result.error || "An unkown error occurred!");
       }
     };
     getProducts();
