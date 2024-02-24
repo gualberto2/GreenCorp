@@ -20,7 +20,7 @@ export default function Products() {
           // Assuming the first image in the data array is the primary image.
           const imageUrl =
             Product_IMG.data.length > 0
-              ? `http://localhost:1337${Product_IMG.data[0].attributes.url}` // Prefix with your API base URL
+              ? `http://knj-cms-system-11bdd0096622.herokuapp.com${Product_IMG.data[0].attributes.url}` // Prefix with your API base URL
               : "";
 
           return {
