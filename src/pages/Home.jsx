@@ -301,14 +301,14 @@ export default function Home() {
           </div>
           <div className=" flex items-center flex-col md:pt-36 pt-32 max-w-3xl mx-auto text-white ">
             <h1
-              className={`font-display md:text-6xl text-3xl text-center sm:text-nowrap transition-opacity duration-500 mb-8 md:mb-0 ${
+              className={`font-display md:text-6xl text-5xl text-center sm:text-nowrap transition-opacity duration-500 mb-8 md:mb-0 ${
                 showTitle ? "opacity-100" : "opacity-0"
               }`}
             >
               KnJ GREEN PACK CORP.
             </h1>
             <div className="flex flex-col items-start justify-center mb-4 md:pt-10 md:mb-8">
-              <h2 className="text-5xl tracking-tighter mb-1 md:mb-0 px-2 md:px-4 md:mt-8 font-light">
+              <h2 className="text-5xl text-center tracking-tighter mb-1 md:mb-0 px-2 md:px-4 md:mt-8 font-light">
                 Making a Difference with Recycling
               </h2>
               {/* <p className="text-lg px-3 tracking-wide">
@@ -352,7 +352,7 @@ export default function Home() {
             <div class="border-t border-gray-300 w-16"></div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-start gap-6 line-clamp-3 justify-center w-full md:gap-10 px-2 md:px-4 mx-auto  max-w-5xl">
+          <div className="flex flex-col md:flex-row items-start gap-6 line-clamp-3 justify-center w-full md:gap-10 px-6 md:px-4 mx-auto  max-w-5xl">
             <div className="flex flex-col justify-center w-full text-center ">
               <div className=" bg-green-300 mx-auto rounded-full text-white text-3xl flex p-4 justify-center items-center">
                 <FaRecycle className="" />
@@ -360,11 +360,11 @@ export default function Home() {
               <h3 className="text-2xl font-semibold tracking-tighter">
                 Recycling
               </h3>
-              <p className="tracking-wide font-light text-gray-500">
+              <p className="tracking-wide font-light text-md text-gray-500">
                 We pride ourselves in the hassle-free and cost effective
                 recycling process for associates
               </p>
-              <p className="tracking-wider font-normal hover:text-gray-500">
+              <p className="tracking-wider font-normal text-md hover:text-gray-500">
                 Learn more {">"}
                 {">"}
               </p>
@@ -374,7 +374,7 @@ export default function Home() {
                 <FaPeopleArrows />
               </div>
               <h3 className="text-2xl font-semibold tracking-tighter">B2B</h3>
-              <p className="tracking-wide font-light text-gray-500">
+              <p className="tracking-wide font-light text-gray-500 text-md">
                 Business to Business transactions are our specialty
               </p>
               <p className="tracking-wider font-normal hover:text-gray-500">
@@ -389,7 +389,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold tracking-tighter">
                 Shipping
               </h3>
-              <p className="tracking-wide font-light text-gray-500">
+              <p className="tracking-wide font-light text-md text-gray-500">
                 No matter what continent you require material, we will get it
                 shipped to you.
               </p>
@@ -405,7 +405,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold tracking-tighter">
                 Environment
               </h3>
-              <p className="tracking-wide font-light text-gray-500">
+              <p className="tracking-wide font-light text-md text-gray-500">
                 Processing of materials is done by hand, by real people.
                 Ensuring high-grade quality.
               </p>
@@ -421,7 +421,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold tracking-tighter">
                 Distribution
               </h3>
-              <p className="tracking-wide font-light text-gray-500">
+              <p className="tracking-wide font-light text-md text-gray-500">
                 Tackling distribution, ensuring quality and proper delivery, we
                 make handling product a stress-free operation.
               </p>
@@ -467,7 +467,7 @@ export default function Home() {
       {/* Product section */}
       <div className="">
         <div className="lg:max-w-6xl mx-auto lg:h-[500px]">
-          <h2 className="text-6xl font-semibold tracking-tight text-center mt-4">
+          <h2 className="text-6xl font-semibold tracking-tighter text-center mt-4">
             Products
           </h2>
           <div className="flex flex-col lg:flex-row justify-between py-8 md:px-16 md:text-nowrap">
@@ -502,10 +502,10 @@ export default function Home() {
 
         {/* Middle Support  */}
         <div className="w-full">
-          <div className="flex flex-col sm:flex-row md:grid md:grid-cols-8 md:grid-rows-1">
+          <div className="flex flex-col md:flex-row md:grid md:grid-cols-8">
             <img
               className="object-cover w-full col-start-1 col-end-4  h-[500px]"
-              src="https://kmsibir.ru/upload/iblock/572/lyz6j3z00d7d8jomqhpu4s452m9t1sah.jpg"
+              src="https://kmsibir.ru/upload/iblock/607/607b205bfa260ff2987d12ad23cf1fe2.jpg"
               alt=""
             />
 

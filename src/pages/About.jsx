@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { IoMdPaperPlane } from "react-icons/io";
+import React from "react";
 import { Carousel as AboutCarousel } from "../components/about-components/about-carousel";
 
 export default function About() {
@@ -21,27 +20,6 @@ export default function About() {
       description: "Helo",
     },
   ];
-
-  // const [boxes, setBoxes] = useState([1, 2, 3]); // Array of boxes, you can add more if needed
-
-  // useEffect(() => {
-  //   // Set a timeout for each box to start its animation
-  //   const timers = boxes.map(
-  //     (box, index) =>
-  //       setTimeout(() => {
-  //         // Add a class to start the animation
-  //         document.getElementById(`box${box}`).classList.add("animate");
-  //       }, index * 1000) // Adjust time for each box's delay
-  //   );
-
-  //   // Cleanup timeouts on component unmount
-  //   return () => timers.forEach((timer) => clearTimeout(timer));
-  // }, [boxes]);
-  // <div id="animationWrapper">
-  //   {boxes.map((box) => (
-  //     <div key={box} className="box" id={`box${box}`}></div>
-  //   ))}
-  // </div>
 
   return (
     <>
@@ -131,10 +109,10 @@ export default function About() {
               </div>
             </div>
 
-            <div class="relative border-l-2 md:border-t-2 md:border-l-0 border-gray-300 mx-20 flex justify-center">
+            <div class="relative border-l-2 md:border-t-2 md:border-l-0 border-gray-300 mx-16 md:mx-auto flex justify-center">
               <div class="flex flex-col md:flex-row justify-between  -mt-2">
                 <div class="text-left px-2 flex flex-row md:flex-col items-center ">
-                  <div class="h-3 w-3 bg-green-600 rounded-full -ml-[15px] md:mb-1"></div>
+                  <div class="h-3 w-3 bg-green-600 rounded-full -ml-[15px] md:ml-0 md:mb-1"></div>
                   <span class="text-left text-md font-medium ml-16">
                     Own production
                   </span>
