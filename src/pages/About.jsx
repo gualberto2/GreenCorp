@@ -23,7 +23,7 @@ export default function About() {
 
   return (
     <>
-      <section className="mt-20 max-w-6xl mx-auto">
+      <section className="mt-20  mx-auto">
         <div className="flex flex-row items-center font-extralight text-lg tracking-tight text-gray-400 gap-2 px-4 md:px-8">
           <p className="underline decoration-gray-300 ">home</p>
           <p className="text-sm">{">"}</p>
@@ -59,7 +59,7 @@ export default function About() {
             <h2 className="text-4xl text-white tracking-tighter font-semibold ">
               We are engaged in our distribution process
             </h2>
-            <div class="text-white flex flex-col gap-8 md:hidden pl-10 my-14">
+            <div class="text-white flex flex-col gap-8 md pl-10 my-14">
               <div>
                 <div class="number relative font-bold  text-3xl before:absolute before:bg-orange-500 before:w-1 before:h-12 before:-left-4 before:top-1/2 before:-translate-y-1/2 after:absolute after:bg-black after:w-1 after:h-full after:-left-4 after:top-1/2 after:-translate-y-1/2 after:-z-10">
                   01
@@ -89,13 +89,13 @@ export default function About() {
               </div>
             </div>
 
-            <div class="text-white hidden gap-4 md:flex flex-col pl-10">
+            {/* <div class="text-white hidden gap-4 md:flex flex-col pl-10">
               <div>
                 <div>
                   <AboutCarousel card={cards} />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -121,28 +121,28 @@ export default function About() {
                 <div class="text-left px-2 flex flex-row md:flex-col items-center ">
                   <div class="h-3 w-3 bg-green-600 rounded-full -ml-[15px] md:mb-1"></div>
                   <span class="text-left text-md font-medium ml-16">
-                    Own production
+                    Recycle Recycle
                   </span>
                 </div>
 
                 <div class="text-left px-2 flex flex-row md:flex-col items-center ">
                   <div class="h-3 w-3 bg-green-600 rounded-full -ml-[15px] md:mb-1"></div>
                   <span class="text-left text-md font-medium ml-16">
-                    Own production
+                    Shipping worldwide
                   </span>
                 </div>
 
                 <div class="text-left px-2 flex flex-row md:flex-col items-center ">
                   <div class="h-3 w-3 bg-green-600 rounded-full -ml-[15px] md:mb-1"></div>
                   <span class="text-left text-md font-medium ml-16">
-                    Own production
+                    Distribution Insurance
                   </span>
                 </div>
 
                 <div class="text-left px-2 flex flex-row md:flex-col items-center ">
                   <div class="h-3 w-3 bg-green-600 rounded-full -ml-[15px] md:mb-1"></div>
                   <span class="text-left text-md font-medium ml-16">
-                    Own production
+                    Protected Cargo
                   </span>
                 </div>
               </div>
