@@ -46,7 +46,10 @@ export default function Navbar() {
       >
         <div>
           <h1 className="flex flex-col items-center">
-            <span className="font-display text-2xl text-center ">
+            <span
+              className="font-display cursor-pointer text-2xl text-center "
+              onClick={() => navigate("/")}
+            >
               KnJ GREEN PACK CORP.
             </span>
             <span className="flex md:hidden">
@@ -57,28 +60,28 @@ export default function Navbar() {
         {/* <div className="flex md:hidden">
           <button className="text-white text-lg font-bold">v</button>
         </div> */}
-        <div className=" flex-row justify-between hidden md:flex md:gap-6 text-white items-center  font-light  text-lg tracking-tighter">
+        <div className=" flex-row justify-between hidden md:flex md:gap-6 text-white items-center  font-light  text-xl tracking-tight">
           <p
             onClick={() => navigate("/")}
-            className="hover:cursor-pointer  transition duration-150 ease-in-out hover:text-[#56e39f]"
+            className="cursor-pointer  transition duration-150 ease-in-out hover:text-[#56e39f] hover:underline"
           >
             Home
           </p>
           <p
             onClick={() => navigate("/products")}
-            className="hover:cursor-pointer hover:text-[#56e39f]  transition duration-150 ease-in-out"
+            className="cursor-pointer hover:text-[#56e39f]  transition duration-150 ease-in-out hover:underline"
           >
             Products
           </p>
           <p
             onClick={() => navigate("/about")}
-            className="hover:cursor-pointer transition duration-150 ease-in-out hover:text-[#56e39f]"
+            className="cursor-pointer transition duration-150 ease-in-out hover:text-[#56e39f] hover:underline"
           >
             About
           </p>
           <p
             onClick={() => navigate("/contact")}
-            className="hover:cursor-pointer hover:text-[#56e39f]  transition duration-150 ease-in-out"
+            className="cursor-pointer hover:text-[#56e39f]  transition duration-150 ease-in-out hover:underline"
           >
             Contact
           </p>
