@@ -73,47 +73,6 @@ export default function Home() {
     },
   ];
 
-  // Service images
-  const serviceImages = [
-    {
-      img: "src/assets/KnjStockImg/1.png",
-      id: 1,
-    },
-    {
-      img: "src/assets/KnjStockImg/2.png",
-      id: 2,
-    },
-    {
-      img: "src/assets/KnjStockImg/3.png",
-      id: 3,
-    },
-  ];
-
-  const sections = [
-    {
-      title: "45,000 Pounds",
-      description: "Of monthly storage volume of roving fabric in warehouse",
-    },
-    {
-      title: "Shipping same day guaranteed!",
-      description:
-        "Upon conclusion of an agreement and 100% prepayment - the minimum period for issuing an order is from 1 day",
-    },
-    {
-      title: "We work with VAT",
-      description:
-        "Quality guarantee under the contract. Conclusion of contracts for tender procurement Federal Law-44 and Federal Law-223",
-    },
-  ];
-
-  const nextSection = () => {
-    setCurrentSection((currentSection + 1) % sections.length);
-  };
-
-  const prevSection = () => {
-    setCurrentSection((currentSection - 1 + sections.length) % sections.length);
-  };
-
   const renderItemContent = () => {
     switch (activeItem) {
       /* HDPE Listings */
@@ -440,17 +399,17 @@ export default function Home() {
           <div className="col-start-1 col-end-4 bg-[#59c9a5] text-white pt-12 pb-24 px-10 md:px-20 flex flex-col justify-between">
             <div>
               <h2 className="text-3xl font-bold tracking-tight mb-1">
-                {sections[currentSection].title}
+                45,000 Pounds
               </h2>
               <p className="text-lg font-light tracking-wide">
-                {sections[currentSection].description}
+                Of monthly storage volume of roving fabric in warehouse
               </p>
             </div>
             <div className="flex justify-around mt-4">
-              <p className="cursor-pointer text-5xl" onClick={prevSection}>
+              <p className="cursor-pointer text-5xl">
                 <FaArrowAltCircleLeft />
               </p>
-              <p className="cursor-pointer text-5xl" onClick={nextSection}>
+              <p className="cursor-pointer text-5xl">
                 <FaArrowAltCircleRight />
               </p>
             </div>
@@ -512,17 +471,18 @@ export default function Home() {
             <div className=" bg-[#59c9a5]  text-white pt-12 pb-24 px-10  flex flex-col justify-between col-start-4 col-end-9 row-span-1">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight mb-1">
-                  {sections[currentSection].title}
+                  Shipping same day guaranteed!
                 </h2>
                 <p className="text-lg font-light tracking-wide">
-                  {sections[currentSection].description}
+                  Upon conclusion of an agreement and 100% prepayment - the
+                  minimum period for issuing an order is from 1 day
                 </p>
               </div>
               <div className="flex justify-around mt-4">
-                <p className="cursor-pointer text-5xl" onClick={prevSection}>
+                <p className="cursor-pointer text-5xl">
                   <FaArrowAltCircleLeft />
                 </p>
-                <p className="cursor-pointer text-5xl" onClick={nextSection}>
+                <p className="cursor-pointer text-5xl">
                   <FaArrowAltCircleRight />
                 </p>
               </div>
